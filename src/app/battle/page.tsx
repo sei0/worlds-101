@@ -59,7 +59,7 @@ export default function BattlePage() {
           >
             ← 뽑기로 돌아가기
           </Link>
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold mb-2 text-white">
             팀 배틀
           </h1>
           <p className="text-gray-400 text-sm">
@@ -74,8 +74,8 @@ export default function BattlePage() {
             </p>
             <Button
               onClick={handleDraw}
-              className="px-8 py-4 text-lg font-bold text-white rounded-xl
-                         bg-gradient-to-r from-pink-500 to-rose-500 
+              className="px-8 py-4 text-lg font-bold text-slate-900 rounded-xl
+                         bg-white hover:bg-gray-100
                          hover:scale-105 transition-all cursor-pointer"
             >
               🎰 팀 뽑기
@@ -115,8 +115,8 @@ export default function BattlePage() {
               <div className="text-center">
                 <Button
                   onClick={handleBattle}
-                  className="px-8 py-4 text-lg font-bold text-white rounded-xl
-                             bg-gradient-to-r from-red-500 to-orange-500 
+                  className="px-8 py-4 text-lg font-bold text-slate-900 rounded-xl
+                             bg-white hover:bg-gray-100
                              hover:scale-105 transition-all cursor-pointer"
                 >
                   ⚔️ 배틀 시작!
@@ -182,8 +182,8 @@ export default function BattlePage() {
                 <div className="flex gap-4 justify-center">
                   <Button
                     onClick={handleBattle}
-                    className="px-6 py-3 font-bold text-white rounded-lg
-                               bg-gradient-to-r from-red-500 to-orange-500 
+                    className="px-6 py-3 font-bold text-slate-900 rounded-lg
+                               bg-white hover:bg-gray-100
                                hover:scale-105 transition-all cursor-pointer"
                   >
                     다시 배틀

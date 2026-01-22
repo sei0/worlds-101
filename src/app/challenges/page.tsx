@@ -36,7 +36,7 @@ export default function ChallengesPage() {
           >
             ← 뽑기로 돌아가기
           </Link>
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold mb-2 text-white">
             드림팀 챌린지
           </h1>
           <p className="text-gray-400 text-sm">

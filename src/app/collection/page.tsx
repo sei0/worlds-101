@@ -52,7 +52,7 @@ export default function CollectionPage() {
           >
             ← 뽑기로 돌아가기
           </Link>
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold mb-2 text-white">
             선수 도감
           </h1>
           <p className="text-gray-400 text-sm">

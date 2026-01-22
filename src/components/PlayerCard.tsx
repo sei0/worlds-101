@@ -84,10 +84,10 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
           }}
         >
           <div className="flex justify-between items-center mb-2">
-            <span className={`text-xs font-bold uppercase ${textColor}`}>
+            <span className={`text-[10px] font-bold uppercase ${textColor}`}>
               {player.grade}
             </span>
-            <span className="text-xs text-gray-400 bg-slate-700 px-2 py-0.5 rounded">
+            <span className="text-[10px] text-gray-400 bg-slate-700 px-1.5 py-0.5 rounded">
               {POSITION_LABELS[player.position]}
             </span>
           </div>
@@ -97,16 +97,16 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
           </div>
 
           <div className="text-center">
-            <div className="text-base font-bold text-white mb-1 truncate">
+            <div className="text-sm font-bold text-white mb-1 truncate">
               {player.name}
             </div>
-            <div className="text-xs text-gray-400">
+            <div className="text-[10px] text-gray-400">
               {player.stats.championships > 0 && `🏆×${player.stats.championships} `}
               {player.stats.appearances}회 출전
             </div>
           </div>
 
-          <div className="mt-2 text-xs text-gray-500 text-center truncate">
+          <div className="mt-1.5 text-[10px] text-gray-500 text-center truncate">
             {player.teams.slice(0, 2).join(", ")}
             {player.teams.length > 2 && ` +${player.teams.length - 2}`}
           </div>

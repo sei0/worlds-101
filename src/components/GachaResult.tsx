@@ -55,9 +55,9 @@ export function GachaResult({ team, onReset }: GachaResultProps) {
           </div>
           <Button
             onClick={onReset}
-            className="px-8 py-3 text-base font-bold text-white rounded-lg
-                       bg-gradient-to-r from-indigo-500 to-purple-600
-                       hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/40
+            className="px-8 py-3 text-base font-bold text-slate-900 rounded-lg
+                       bg-white hover:bg-gray-100
+                       hover:scale-105 hover:shadow-lg hover:shadow-white/20
                        transition-all duration-200 cursor-pointer"
           >
             다시 뽑기
