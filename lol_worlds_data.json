@@ -1,0 +1,2492 @@
+{
+  "metadata": {
+    "description": "League of Legends World Championship Players Database with Results (2013-2025)",
+    "total_years": 13,
+    "years_covered": "2013-2025",
+    "last_updated": "2026-01-22",
+    "result_categories": [
+      "Champion",
+      "Runner-up",
+      "Semifinals",
+      "Quarterfinals",
+      "Group Stage"
+    ]
+  },
+  "tournaments": [
+    {
+      "year": 2013,
+      "teams": [
+        {
+          "name": "Cloud9",
+          "result": "Quarterfinals",
+          "players": [
+            "Balls",
+            "Hai",
+            "LemonNation",
+            "Meteos",
+            "Sneaky"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Semifinals",
+          "players": [
+            "Cyanide",
+            "YellOwStaR",
+            "puszu",
+            "sOAZ",
+            "xPeke"
+          ]
+        },
+        {
+          "name": "Gamania Bears",
+          "result": "Quarterfinals",
+          "players": [
+            "Maple",
+            "NL",
+            "Steak",
+            "SwordArt",
+            "Winds"
+          ]
+        },
+        {
+          "name": "Gambit Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Alex Ich",
+            "Darien",
+            "Diamondprox",
+            "Genja",
+            "Voidle"
+          ]
+        },
+        {
+          "name": "GamingGear.eu",
+          "result": "Group Stage",
+          "players": [
+            "Alunir",
+            "DeadlyBrother",
+            "Inspirro",
+            "Mazzerin",
+            "NBs"
+          ]
+        },
+        {
+          "name": "Lemondogs",
+          "result": "Group Stage",
+          "players": [
+            "Mithy",
+            "Nukeduck",
+            "Tabzz",
+            "Zorozero",
+            "dexter1"
+          ]
+        },
+        {
+          "name": "Mineski",
+          "result": "Group Stage",
+          "players": [
+            "Exo",
+            "Kaigu",
+            "Snoy",
+            "Tgee",
+            "Yume"
+          ]
+        },
+        {
+          "name": "NaJin Black Sword",
+          "result": "Semifinals",
+          "players": [
+            "Cain",
+            "Expession",
+            "Nagne",
+            "PraY",
+            "watch"
+          ]
+        },
+        {
+          "name": "Oh My God",
+          "result": "Quarterfinals",
+          "players": [
+            "Cool",
+            "Gogoing",
+            "LoveLin",
+            "bigpomelo",
+            "san"
+          ]
+        },
+        {
+          "name": "Royal Club",
+          "result": "Runner-up",
+          "players": [
+            "GoDlike",
+            "Lucky",
+            "Tabe",
+            "Uzi",
+            "Wh1t3zZ"
+          ]
+        },
+        {
+          "name": "SK Telecom T1",
+          "result": "Champion",
+          "players": [
+            "Faker",
+            "Impact",
+            "Piglet",
+            "PoohManDu",
+            "bengi"
+          ]
+        },
+        {
+          "name": "Samsung Ozone",
+          "result": "Group Stage",
+          "players": [
+            "DanDy",
+            "Looper",
+            "Mata",
+            "dade",
+            "imp"
+          ]
+        },
+        {
+          "name": "Team SoloMid",
+          "result": "Group Stage",
+          "players": [
+            "Dyrus",
+            "Reginald",
+            "TheOddOne",
+            "WildTurtle",
+            "Xpecial"
+          ]
+        },
+        {
+          "name": "Team Vulcun",
+          "result": "Group Stage",
+          "players": [
+            "BloodWater",
+            "Sycho Sid",
+            "Xmithie",
+            "Zuna",
+            "mancloud"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "teams": [
+        {
+          "name": "Alliance",
+          "result": "Group Stage",
+          "players": [
+            "Froggen",
+            "Nyph",
+            "Shook",
+            "Tabzz",
+            "Wickd"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Quarterfinals",
+          "players": [
+            "Balls",
+            "Hai",
+            "LemonNation",
+            "Meteos",
+            "Sneaky"
+          ]
+        },
+        {
+          "name": "Dark Passage",
+          "result": "Group Stage",
+          "players": [
+            "Crystal",
+            "HolyPhoenix",
+            "Naru",
+            "Touch",
+            "fabFabulous"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "ClearLove",
+            "Fzzf",
+            "Koro1",
+            "NaMei",
+            "U"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Group Stage",
+          "players": [
+            "Cyanide",
+            "Rekkles",
+            "YellOwStaR",
+            "sOAZ",
+            "xPeke"
+          ]
+        },
+        {
+          "name": "KaBuM! e-Sports",
+          "result": "Group Stage",
+          "players": [
+            "Danagorn",
+            "LEP",
+            "Minerva",
+            "TinOwns",
+            "dans"
+          ]
+        },
+        {
+          "name": "LMQ",
+          "result": "Group Stage",
+          "players": [
+            "Mor",
+            "NoName",
+            "Vasilii",
+            "XiaoWeiXiao",
+            "ackerman"
+          ]
+        },
+        {
+          "name": "NaJin White Shield",
+          "result": "Quarterfinals",
+          "players": [
+            "Ggoong",
+            "GorillA",
+            "Save",
+            "Watch",
+            "Zefa"
+          ]
+        },
+        {
+          "name": "Oh My God",
+          "result": "Semifinals",
+          "players": [
+            "Cloud",
+            "Gogoing",
+            "Loveling",
+            "cool",
+            "san"
+          ]
+        },
+        {
+          "name": "SK Gaming",
+          "result": "Group Stage",
+          "players": [
+            "CandyPanda",
+            "Jesiz",
+            "Svenskeren",
+            "fredy122",
+            "nRated"
+          ]
+        },
+        {
+          "name": "Samsung Blue",
+          "result": "Semifinals",
+          "players": [
+            "Acorn",
+            "Dade",
+            "Deft",
+            "Heart",
+            "Spirit"
+          ]
+        },
+        {
+          "name": "Samsung White",
+          "result": "Champion",
+          "players": [
+            "Dandy",
+            "Looper",
+            "Mata",
+            "PawN",
+            "imp"
+          ]
+        },
+        {
+          "name": "Star Horn Royal Club",
+          "result": "Runner-up",
+          "players": [
+            "Cola",
+            "Uzi",
+            "Zero",
+            "corn",
+            "inSec"
+          ]
+        },
+        {
+          "name": "Taipei Assassins",
+          "result": "Group Stage",
+          "players": [
+            "Achie",
+            "BeBe",
+            "Jay",
+            "Morning",
+            "Winds"
+          ]
+        },
+        {
+          "name": "Team SoloMid",
+          "result": "Quarterfinals",
+          "players": [
+            "Amazing",
+            "Bjergsen",
+            "Dyrus",
+            "Lustboy",
+            "WildTurtle"
+          ]
+        },
+        {
+          "name": "ahq e-Sports Club",
+          "result": "Group Stage",
+          "players": [
+            "GarnetDevil",
+            "GreenTea",
+            "NAZ",
+            "Prydz",
+            "westdoor"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "teams": [
+        {
+          "name": "Bangkok Titans",
+          "result": "Group Stage",
+          "players": [
+            "007x",
+            "Cabbage",
+            "G4",
+            "Lloyd",
+            "Moss",
+            "WarL0cK"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Group Stage",
+          "players": [
+            "Balls",
+            "Bubbadub",
+            "Hai",
+            "Incarnati0n",
+            "LemonNation",
+            "Sneaky"
+          ]
+        },
+        {
+          "name": "Counter Logic Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Doublelift",
+            "Pobelter",
+            "Xmithie",
+            "Zikzlol",
+            "ZionSpartan",
+            "aphromoo"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Aaron",
+            "AmazingJ",
+            "Clearlove",
+            "Deft",
+            "Koro1",
+            "Meiko",
+            "PawN"
+          ]
+        },
+        {
+          "name": "Flash Wolves",
+          "result": "Quarterfinals",
+          "players": [
+            "Fluidwind",
+            "Karsa",
+            "Kkramer",
+            "Maple",
+            "NL",
+            "Steak",
+            "SwordArt"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Semifinals",
+          "players": [
+            "Deilor",
+            "Febiven",
+            "Huni",
+            "Reignover",
+            "Rekkles",
+            "YellOwStaR"
+          ]
+        },
+        {
+          "name": "H2k-Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Hjarnan",
+            "Odoamne",
+            "Ryu",
+            "kaSing",
+            "loulex",
+            "pr0lly"
+          ]
+        },
+        {
+          "name": "Invictus Gaming",
+          "result": "Group Stage",
+          "players": [
+            "KAKAO",
+            "Kid",
+            "Kitties",
+            "Mafa",
+            "Rookie",
+            "Time",
+            "Zz1tai"
+          ]
+        },
+        {
+          "name": "KOO Tigers",
+          "result": "Runner-up",
+          "players": [
+            "GorillA",
+            "Hojin",
+            "Kuro",
+            "NoFe",
+            "PraY",
+            "Smeb"
+          ]
+        },
+        {
+          "name": "KT Rolster",
+          "result": "Quarterfinals",
+          "players": [
+            "Arrow",
+            "Nagne",
+            "Piccaboo",
+            "Score",
+            "Ssumday"
+          ]
+        },
+        {
+          "name": "LGD Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Acorn",
+            "FireFox",
+            "Flame",
+            "GODV",
+            "Pyl",
+            "TBQ",
+            "imp"
+          ]
+        },
+        {
+          "name": "Origen",
+          "result": "Semifinals",
+          "players": [
+            "Amazing",
+            "Hermit",
+            "Mithy",
+            "Niels",
+            "Soaz",
+            "xPeke"
+          ]
+        },
+        {
+          "name": "SK Telecom T1",
+          "result": "Champion",
+          "players": [
+            "Bang",
+            "Bengi",
+            "Easyhoon",
+            "Faker",
+            "MaRin",
+            "Wolf",
+            "kkOma"
+          ]
+        },
+        {
+          "name": "TSM",
+          "result": "Group Stage",
+          "players": [
+            "Bjergsen",
+            "Dyrus",
+            "Locodoco",
+            "Lustboy",
+            "Santorin",
+            "WildTurtle"
+          ]
+        },
+        {
+          "name": "ahq eSports Club",
+          "result": "Quarterfinals",
+          "players": [
+            "AN",
+            "Albis",
+            "Backstairs",
+            "Mountain",
+            "Westdoor",
+            "Ziv"
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Dioud",
+            "Kami",
+            "MiT",
+            "Mylon",
+            "SirT",
+            "brTT"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "teams": [
+        {
+          "name": "Albus NoX Luna",
+          "result": "Quarterfinals",
+          "players": [
+            "Kira",
+            "Likkrit",
+            "PvPStejos",
+            "Smurf",
+            "aMiracle"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Quarterfinals",
+          "players": [
+            "Impact",
+            "Jensen",
+            "Meteos",
+            "Smoothie",
+            "Sneaky"
+          ]
+        },
+        {
+          "name": "Counter Logic Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Darshan",
+            "Huhi",
+            "Stixxay",
+            "Xmithie",
+            "aphromoo"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Clearlove",
+            "Deft",
+            "Meiko",
+            "Mouse",
+            "Scout"
+          ]
+        },
+        {
+          "name": "Flash Wolves",
+          "result": "Group Stage",
+          "players": [
+            "Karsa",
+            "MMD",
+            "Maple",
+            "NL",
+            "SwordArt"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Group Stage",
+          "players": [
+            "Expect",
+            "Perkz",
+            "Trick",
+            "Zven",
+            "mithy"
+          ]
+        },
+        {
+          "name": "H2K",
+          "result": "Semifinals",
+          "players": [
+            "FORG1VEN",
+            "Jankos",
+            "Odoamne",
+            "Ryu",
+            "Vander"
+          ]
+        },
+        {
+          "name": "I May",
+          "result": "Group Stage",
+          "players": [
+            "AmazingJ",
+            "Avoidless",
+            "BaeMe",
+            "Jinjiao",
+            "Road"
+          ]
+        },
+        {
+          "name": "INTZ eSports",
+          "result": "Group Stage",
+          "players": [
+            "Jockster",
+            "Revolta",
+            "Yang",
+            "micaO",
+            "tockers"
+          ]
+        },
+        {
+          "name": "ROX Tigers",
+          "result": "Semifinals",
+          "players": [
+            "GorillA",
+            "Kuro",
+            "Peanut",
+            "PraY",
+            "Smeb"
+          ]
+        },
+        {
+          "name": "Royal Never Give Up",
+          "result": "Quarterfinals",
+          "players": [
+            "Looper",
+            "Mata",
+            "Mlxg",
+            "Uzi",
+            "Xiaohu"
+          ]
+        },
+        {
+          "name": "SK Telecom T1",
+          "result": "Champion",
+          "players": [
+            "Bang",
+            "Bengi",
+            "Duke",
+            "Faker",
+            "Wolf"
+          ]
+        },
+        {
+          "name": "Samsung Galaxy",
+          "result": "Runner-up",
+          "players": [
+            "Ambition",
+            "CoreJJ",
+            "Crown",
+            "CuVee",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "Splyce",
+          "result": "Group Stage",
+          "players": [
+            "Kobbe",
+            "Mikyx",
+            "Sencux",
+            "Trashy",
+            "Wunder"
+          ]
+        },
+        {
+          "name": "Team SoloMid",
+          "result": "Group Stage",
+          "players": [
+            "Biofrost",
+            "Bjergsen",
+            "Doublelift",
+            "Hauntzer",
+            "Svenskeren"
+          ]
+        },
+        {
+          "name": "ahq e-Sports Club",
+          "result": "Group Stage",
+          "players": [
+            "AN",
+            "Albis",
+            "Mountain",
+            "Westdoor",
+            "Ziv"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "teams": [
+        {
+          "name": "1907 Fenerbahçe Esports",
+          "result": "Group Stage",
+          "players": [
+            "Crash",
+            "Frozen",
+            "Japone",
+            "Padden",
+            "Thaldrin",
+            "WaenA"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Quarterfinals",
+          "players": [
+            "Contractz",
+            "Impact",
+            "Jensen",
+            "Ray",
+            "Smoothie",
+            "Sneaky"
+          ]
+        },
+        {
+          "name": "Dire Wolves",
+          "result": "Group Stage",
+          "players": [
+            "Chippys",
+            "Destiny",
+            "Phantiks",
+            "Rippii",
+            "Shernfire",
+            "k1ng"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Audi",
+            "Clearlove7",
+            "Meiko",
+            "Mouse",
+            "Scout",
+            "iBoy"
+          ]
+        },
+        {
+          "name": "Flash Wolves",
+          "result": "Group Stage",
+          "players": [
+            "Betty",
+            "Cyo",
+            "Karsa",
+            "MMD",
+            "Maple",
+            "SwordArT"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Quarterfinals",
+          "players": [
+            "Broxah",
+            "Caps",
+            "Jesiz",
+            "Rekkles",
+            "Special",
+            "sOAZ"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Group Stage",
+          "players": [
+            "Expect",
+            "Hoang",
+            "Perkz",
+            "Trick",
+            "Zven",
+            "mithy"
+          ]
+        },
+        {
+          "name": "GIGABYTE Marines",
+          "result": "Group Stage",
+          "players": [
+            "Archie",
+            "Levi",
+            "Nevan",
+            "Noway",
+            "Optimus",
+            "Sya"
+          ]
+        },
+        {
+          "name": "Gambit Esports",
+          "result": "Group Stage",
+          "players": [
+            "Blasting",
+            "Diamondprox",
+            "EDward",
+            "Kira",
+            "PvPStejos",
+            "Tauren"
+          ]
+        },
+        {
+          "name": "Hong Kong Attitude",
+          "result": "Group Stage",
+          "players": [
+            "Gemini",
+            "Godkwai",
+            "Kaiwing",
+            "M1ssion",
+            "Riris",
+            "Unified"
+          ]
+        },
+        {
+          "name": "Immortals",
+          "result": "Group Stage",
+          "players": [
+            "AnDa",
+            "Cody Sun",
+            "Flame",
+            "Olleh",
+            "Pobelter",
+            "Xmithie"
+          ]
+        },
+        {
+          "name": "Kaos Latin Gamers",
+          "result": "Group Stage",
+          "players": [
+            "Fix",
+            "Focho",
+            "MANTARRAYA",
+            "Plugo",
+            "Slow",
+            "Tierwulf"
+          ]
+        },
+        {
+          "name": "Longzhu Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Bdd",
+            "Cuzz",
+            "GorillA",
+            "Khan",
+            "PraY",
+            "Rascal"
+          ]
+        },
+        {
+          "name": "Lyon Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Genthix",
+            "Jirall",
+            "MarioMe",
+            "Oddie",
+            "Seiya",
+            "WhiteLotus"
+          ]
+        },
+        {
+          "name": "Misfits Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Alphari",
+            "Hans Sama",
+            "Hiiva",
+            "IgNar",
+            "Maxlore",
+            "PowerOfEvil"
+          ]
+        },
+        {
+          "name": "Rampage",
+          "result": "Group Stage",
+          "players": [
+            "Dara",
+            "Evi",
+            "Ramune",
+            "TETE",
+            "Tussle",
+            "YutoriMoyasi"
+          ]
+        },
+        {
+          "name": "Royal Never Give Up",
+          "result": "Semifinals",
+          "players": [
+            "Letme",
+            "Ming",
+            "Mlxg",
+            "Uzi",
+            "Xiaohu",
+            "Y1HAN"
+          ]
+        },
+        {
+          "name": "SK Telecom T1",
+          "result": "Runner-up",
+          "players": [
+            "Bang",
+            "Blank",
+            "Faker",
+            "Huni",
+            "Peanut",
+            "Wolf"
+          ]
+        },
+        {
+          "name": "Samsung Galaxy",
+          "result": "Champion",
+          "players": [
+            "Ambition",
+            "CoreJJ",
+            "Crown",
+            "CuVee",
+            "Haru",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "Team SoloMid",
+          "result": "Group Stage",
+          "players": [
+            "Biofrost",
+            "Bjergsen",
+            "Doublelift",
+            "Hauntzer",
+            "MrRallez",
+            "Svenskeren"
+          ]
+        },
+        {
+          "name": "Team WE",
+          "result": "Semifinals",
+          "players": [
+            "957",
+            "Ben",
+            "Condi",
+            "Mystic",
+            "Zero",
+            "xiye"
+          ]
+        },
+        {
+          "name": "Team oNe eSports",
+          "result": "Group Stage",
+          "players": [
+            "4LaN",
+            "Absolut",
+            "Brucer",
+            "Marf",
+            "RedBert",
+            "VVvert"
+          ]
+        },
+        {
+          "name": "Young Generation",
+          "result": "Group Stage",
+          "players": [
+            "BigKoro",
+            "Naul",
+            "NhocTy",
+            "Palette",
+            "Ren",
+            "Venus"
+          ]
+        },
+        {
+          "name": "ahq e-Sports Club",
+          "result": "Group Stage",
+          "players": [
+            "AN",
+            "Albis",
+            "Chawy",
+            "Mountain",
+            "Ziv",
+            "westdoor"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "teams": [
+        {
+          "name": "100 Thieves",
+          "result": "Group Stage",
+          "players": [
+            "AnDa",
+            "Bang",
+            "Huhi",
+            "Ssumday",
+            "aphromoo"
+          ]
+        },
+        {
+          "name": "Afreeca Freecs",
+          "result": "Quarterfinals",
+          "players": [
+            "Kiin",
+            "Kramer",
+            "Kuro",
+            "Spirit",
+            "TusiN"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Semifinals",
+          "players": [
+            "Jensen",
+            "Licorice",
+            "Sneaky",
+            "Svenskeren",
+            "Zeyzal"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Haro",
+            "Meiko",
+            "Ray",
+            "Scout",
+            "iBoy"
+          ]
+        },
+        {
+          "name": "Flash Wolves",
+          "result": "Group Stage",
+          "players": [
+            "Betty",
+            "Maple",
+            "Moojin",
+            "Soaz",
+            "SwordArT"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Runner-up",
+          "players": [
+            "Broxah",
+            "Bwipo",
+            "Caps",
+            "Hylissang",
+            "Rekkles",
+            "sOAZ"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Semifinals",
+          "players": [
+            "Hjarnan",
+            "Jankos",
+            "Perkz",
+            "Wadid",
+            "Wunder"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Group Stage",
+          "players": [
+            "CoreJJ",
+            "Crown",
+            "CuVee",
+            "Haru",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "Invictus Gaming",
+          "result": "Champion",
+          "players": [
+            "Baolan",
+            "JackeyLove",
+            "Ning",
+            "Rookie",
+            "TheShy"
+          ]
+        },
+        {
+          "name": "KT Rolster",
+          "result": "Quarterfinals",
+          "players": [
+            "Deft",
+            "Mata",
+            "Score",
+            "Smeb",
+            "Ucal"
+          ]
+        },
+        {
+          "name": "Phong Vũ Buffalo",
+          "result": "Group Stage",
+          "players": [
+            "BigKoro",
+            "Meliodas",
+            "Naul",
+            "Palette",
+            "Zeros"
+          ]
+        },
+        {
+          "name": "Royal Never Give Up",
+          "result": "Quarterfinals",
+          "players": [
+            "Karsa",
+            "Letme",
+            "Ming",
+            "Uzi",
+            "Xiaohu"
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "result": "Group Stage",
+          "players": [
+            "Doublelift",
+            "Impact",
+            "Olleh",
+            "Pobelter",
+            "Xmithie"
+          ]
+        },
+        {
+          "name": "Team Vitality",
+          "result": "Group Stage",
+          "players": [
+            "Attila",
+            "Cabochard",
+            "Jactroll",
+            "Jiizuke",
+            "Kikis"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "teams": [
+        {
+          "name": "Cloud9",
+          "result": "Group Stage",
+          "players": [
+            "Licorice",
+            "Nisqy",
+            "Sneaky",
+            "Svenskeren",
+            "Zeyzal"
+          ]
+        },
+        {
+          "name": "DAMWON Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "BeryL",
+            "Canyon",
+            "Nuclear",
+            "Nuguri",
+            "ShowMaker"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Quarterfinals",
+          "players": [
+            "Broxah",
+            "Bwipo",
+            "Hylissang",
+            "Nemesis",
+            "Rekkles"
+          ]
+        },
+        {
+          "name": "FunPlus Phoenix",
+          "result": "Champion",
+          "players": [
+            "Crisp",
+            "GimGoon",
+            "Tian",
+            "doinb",
+            "lwx"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Runner-up",
+          "players": [
+            "Caps",
+            "Jankos",
+            "Mikyx",
+            "Perkz",
+            "Wunder"
+          ]
+        },
+        {
+          "name": "GAM Esports",
+          "result": "Group Stage",
+          "players": [
+            "Kiaya",
+            "Levi",
+            "Slay",
+            "Zeros",
+            "Zin"
+          ]
+        },
+        {
+          "name": "Griffin",
+          "result": "Quarterfinals",
+          "players": [
+            "Chovy",
+            "Lehends",
+            "Sword",
+            "Tarzan",
+            "Viper"
+          ]
+        },
+        {
+          "name": "Invictus Gaming",
+          "result": "Semifinals",
+          "players": [
+            "Baolan",
+            "JackeyLove",
+            "Ning",
+            "Rookie",
+            "TheShy"
+          ]
+        },
+        {
+          "name": "J Team",
+          "result": "Group Stage",
+          "players": [
+            "FoFo",
+            "Hana",
+            "Koala",
+            "Lilv",
+            "Rest"
+          ]
+        },
+        {
+          "name": "Royal Never Give Up",
+          "result": "Group Stage",
+          "players": [
+            "Karsa",
+            "Langx",
+            "Ming",
+            "Uzi",
+            "Xiaohu"
+          ]
+        },
+        {
+          "name": "SK Telecom T1",
+          "result": "Semifinals",
+          "players": [
+            "Clid",
+            "Effort",
+            "Faker",
+            "Khan",
+            "Teddy"
+          ]
+        },
+        {
+          "name": "Splyce",
+          "result": "Quarterfinals",
+          "players": [
+            "Humanoid",
+            "Kobbe",
+            "Norskeren",
+            "Vizicsacsi",
+            "Xerxe"
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "result": "Group Stage",
+          "players": [
+            "CoreJJ",
+            "Doublelift",
+            "Impact",
+            "Jensen",
+            "Xmithie"
+          ]
+        },
+        {
+          "name": "ahq e-Sports Club",
+          "result": "Group Stage",
+          "players": [
+            "Alex",
+            "Apex",
+            "Wako",
+            "Ysera",
+            "Ziv"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "teams": [
+        {
+          "name": "DAMWON Gaming",
+          "result": "Champion",
+          "players": [
+            "BeryL",
+            "Canyon",
+            "Ghost",
+            "Nuguri",
+            "ShowMaker"
+          ]
+        },
+        {
+          "name": "DRX",
+          "result": "Quarterfinals",
+          "players": [
+            "Chovy",
+            "Deft",
+            "Doran",
+            "Keria",
+            "Pyosik"
+          ]
+        },
+        {
+          "name": "FlyQuest",
+          "result": "Group Stage",
+          "players": [
+            "IgNar",
+            "PowerOfEvil",
+            "Santorin",
+            "Solo",
+            "WildTurtle"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Quarterfinals",
+          "players": [
+            "Bwipo",
+            "Hylissang",
+            "Nemesis",
+            "Rekkles",
+            "Selfmade"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Semifinals",
+          "players": [
+            "Caps",
+            "Jankos",
+            "Mikyx",
+            "Perkz",
+            "Wunder"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "Bdd",
+            "Clid",
+            "Life",
+            "Rascal",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "INTZ",
+          "result": "Group Stage",
+          "players": [
+            "Envy",
+            "RedBert",
+            "Shini",
+            "Tay",
+            "micaO"
+          ]
+        },
+        {
+          "name": "JD Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Kanavi",
+            "LokeN",
+            "LvMao",
+            "Yagao",
+            "Zoom"
+          ]
+        },
+        {
+          "name": "LGD Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Kramer",
+            "Langx",
+            "Mark",
+            "Peanut",
+            "xiye"
+          ]
+        },
+        {
+          "name": "Machi Esports",
+          "result": "Group Stage",
+          "players": [
+            "Bruce",
+            "Gemini",
+            "Koala",
+            "Mission",
+            "PK"
+          ]
+        },
+        {
+          "name": "PSG Talon",
+          "result": "Group Stage",
+          "players": [
+            "Hanabi",
+            "Kaiwing",
+            "River",
+            "Tank",
+            "Unified"
+          ]
+        },
+        {
+          "name": "Rogue",
+          "result": "Group Stage",
+          "players": [
+            "Finn",
+            "Hans sama",
+            "Inspired",
+            "Larssen",
+            "Vander"
+          ]
+        },
+        {
+          "name": "Suning",
+          "result": "Runner-up",
+          "players": [
+            "Angel",
+            "Bin",
+            "SofM",
+            "SwordArt",
+            "huanfeng"
+          ]
+        },
+        {
+          "name": "TSM",
+          "result": "Group Stage",
+          "players": [
+            "Biofrost",
+            "Bjergsen",
+            "Broken Blade",
+            "Doublelift",
+            "Spica"
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "result": "Group Stage",
+          "players": [
+            "Broxah",
+            "CoreJJ",
+            "Impact",
+            "Jensen",
+            "Tactical"
+          ]
+        },
+        {
+          "name": "Top Esports",
+          "result": "Semifinals",
+          "players": [
+            "369",
+            "JackeyLove",
+            "Karsa",
+            "knight",
+            "yuyanjia"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "teams": [
+        {
+          "name": "100 Thieves",
+          "result": "Group Stage",
+          "players": [
+            "Abbedagge",
+            "Closer",
+            "FBI",
+            "Ssumday",
+            "huhi"
+          ]
+        },
+        {
+          "name": "Beyond Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Doggo",
+            "Husha",
+            "Kino",
+            "Liang",
+            "PK"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Quarterfinals",
+          "players": [
+            "Blaber",
+            "Fudge",
+            "Perkz",
+            "Vulcan",
+            "Zven"
+          ]
+        },
+        {
+          "name": "DAMWON Gaming",
+          "result": "Runner-up",
+          "players": [
+            "BeryL",
+            "Canyon",
+            "Ghost",
+            "Khan",
+            "ShowMaker"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Champion",
+          "players": [
+            "Flandre",
+            "Jiejie",
+            "Meiko",
+            "Scout",
+            "Viper"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Group Stage",
+          "players": [
+            "Adam",
+            "Bean",
+            "Bwipo",
+            "Hylissang",
+            "Nisqy"
+          ]
+        },
+        {
+          "name": "FunPlus Phoenix",
+          "result": "Group Stage",
+          "players": [
+            "Crisp",
+            "Doinb",
+            "Lwx",
+            "Nuguri",
+            "Tian"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Semifinals",
+          "players": [
+            "Bdd",
+            "Clid",
+            "Life",
+            "Rascal",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "Hanwha Life Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "Chovy",
+            "Deft",
+            "Morgan",
+            "Vsta",
+            "Willer"
+          ]
+        },
+        {
+          "name": "LNG Esports",
+          "result": "Group Stage",
+          "players": [
+            "Ale",
+            "Iwandy",
+            "Light",
+            "Tarzan",
+            "icon"
+          ]
+        },
+        {
+          "name": "MAD Lions",
+          "result": "Quarterfinals",
+          "players": [
+            "Armut",
+            "Carzzy",
+            "Elyoya",
+            "Humanoid",
+            "Kaiser"
+          ]
+        },
+        {
+          "name": "PSG Talon",
+          "result": "Group Stage",
+          "players": [
+            "Hanabi",
+            "Kaiwing",
+            "Maple",
+            "River",
+            "Unified"
+          ]
+        },
+        {
+          "name": "Rogue",
+          "result": "Group Stage",
+          "players": [
+            "Hans Sama",
+            "Inspired",
+            "Larssen",
+            "Odoamne",
+            "Trymbi"
+          ]
+        },
+        {
+          "name": "Royal Never Give Up",
+          "result": "Quarterfinals",
+          "players": [
+            "Cryin",
+            "GALA",
+            "Ming",
+            "Wei",
+            "Xiaohu"
+          ]
+        },
+        {
+          "name": "T1",
+          "result": "Semifinals",
+          "players": [
+            "Canna",
+            "Faker",
+            "Gumayusi",
+            "Keria",
+            "Oner"
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "result": "Group Stage",
+          "players": [
+            "Alphari",
+            "CoreJJ",
+            "Jensen",
+            "Santorin",
+            "Tactical"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "teams": [
+        {
+          "name": "100 Thieves",
+          "result": "Group Stage",
+          "players": [
+            "Abbedagge",
+            "Closer",
+            "FBI",
+            "Ssumday",
+            "huhi"
+          ]
+        },
+        {
+          "name": "CTBC Flying Oyster",
+          "result": "Group Stage",
+          "players": [
+            "Betty",
+            "Fofo",
+            "Karsa",
+            "Kiwi",
+            "Shunn"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Group Stage",
+          "players": [
+            "Berserker",
+            "Blaber",
+            "Fudge",
+            "Jensen",
+            "Zven"
+          ]
+        },
+        {
+          "name": "DAMWON Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Canyon",
+            "Kellin",
+            "Nuguri",
+            "ShowMaker",
+            "deokdam"
+          ]
+        },
+        {
+          "name": "DRX",
+          "result": "Champion",
+          "players": [
+            "BeryL",
+            "Deft",
+            "Kingen",
+            "Pyosik",
+            "Zeka"
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "result": "Quarterfinals",
+          "players": [
+            "Flandre",
+            "Jiejie",
+            "Meiko",
+            "Scout",
+            "Viper"
+          ]
+        },
+        {
+          "name": "Evil Geniuses",
+          "result": "Group Stage",
+          "players": [
+            "Danny",
+            "Impact",
+            "Inspired",
+            "Jojopyun",
+            "Vulcan"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Group Stage",
+          "players": [
+            "Humanoid",
+            "Hylissang",
+            "Razork",
+            "Upset",
+            "Wunder"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Group Stage",
+          "players": [
+            "BrokenBlade",
+            "Caps",
+            "Flakked",
+            "Jankos",
+            "Targamas"
+          ]
+        },
+        {
+          "name": "GAM Esports",
+          "result": "Group Stage",
+          "players": [
+            "Bie",
+            "Kiaya",
+            "Kinnat",
+            "Levi",
+            "Sty1e"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Semifinals",
+          "players": [
+            "Chovy",
+            "Doran",
+            "Lehends",
+            "Peanut",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "JD Gaming",
+          "result": "Semifinals",
+          "players": [
+            "369",
+            "Hope",
+            "Kanavi",
+            "Missing",
+            "Yagao"
+          ]
+        },
+        {
+          "name": "MAD Lions",
+          "result": "Group Stage",
+          "players": [
+            "Chasy",
+            "Elyoya",
+            "Kaiser",
+            "Nisqy",
+            "UNF0RGIVEN"
+          ]
+        },
+        {
+          "name": "Rogue",
+          "result": "Quarterfinals",
+          "players": [
+            "Comp",
+            "Larssen",
+            "Malrang",
+            "Odoamne",
+            "Trymbi"
+          ]
+        },
+        {
+          "name": "Royal Never Give Up",
+          "result": "Quarterfinals",
+          "players": [
+            "Breathe",
+            "GALA",
+            "Ming",
+            "Wei",
+            "Xiaohu"
+          ]
+        },
+        {
+          "name": "T1",
+          "result": "Runner-up",
+          "players": [
+            "Faker",
+            "Gumayusi",
+            "Keria",
+            "Oner",
+            "Zeus"
+          ]
+        },
+        {
+          "name": "Top Esports",
+          "result": "Group Stage",
+          "players": [
+            "JackeyLove",
+            "Mark",
+            "Tian",
+            "Wayward",
+            "knight"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "teams": [
+        {
+          "name": "Bilibili Gaming",
+          "result": "Semifinals",
+          "players": [
+            "Bin",
+            "Elk",
+            "ON",
+            "XUN",
+            "Yagao"
+          ]
+        },
+        {
+          "name": "Cloud9",
+          "result": "Group Stage",
+          "players": [
+            "Berserker",
+            "Blaber",
+            "EMENES",
+            "Fudge",
+            "Zven"
+          ]
+        },
+        {
+          "name": "Dplus",
+          "result": "Group Stage",
+          "players": [
+            "Canna",
+            "Canyon",
+            "Deft",
+            "Kellin",
+            "ShowMaker"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Group Stage",
+          "players": [
+            "Humanoid",
+            "Noah",
+            "Oscarinin",
+            "Razork",
+            "Trymbi"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Group Stage",
+          "players": [
+            "BrokenBlade",
+            "Caps",
+            "Hans Sama",
+            "Mikyx",
+            "Yike"
+          ]
+        },
+        {
+          "name": "GAM Esports",
+          "result": "Group Stage",
+          "players": [
+            "Easylove",
+            "Elio",
+            "Kati",
+            "Kiaya",
+            "Levi"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "Chovy",
+            "Delight",
+            "Doran",
+            "Peanut",
+            "Peyz"
+          ]
+        },
+        {
+          "name": "JD Gaming",
+          "result": "Semifinals",
+          "players": [
+            "369",
+            "Kanavi",
+            "MISSING",
+            "Ruler",
+            "knight"
+          ]
+        },
+        {
+          "name": "KT Rolster",
+          "result": "Quarterfinals",
+          "players": [
+            "Aiming",
+            "Bdd",
+            "Cuzz",
+            "Kiin",
+            "Lehends"
+          ]
+        },
+        {
+          "name": "LNG Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "Gala",
+            "Hang",
+            "Scout",
+            "Tarzan",
+            "Zika"
+          ]
+        },
+        {
+          "name": "MAD Lions",
+          "result": "Group Stage",
+          "players": [
+            "Carzzy",
+            "Chasy",
+            "Elyoya",
+            "Hylissang",
+            "Nisqy"
+          ]
+        },
+        {
+          "name": "NRG",
+          "result": "Quarterfinals",
+          "players": [
+            "Contractz",
+            "Dhokla",
+            "FBI",
+            "IgNar",
+            "Palafox"
+          ]
+        },
+        {
+          "name": "T1",
+          "result": "Champion",
+          "players": [
+            "Faker",
+            "Gumayusi",
+            "Keria",
+            "Oner",
+            "Zeus"
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "result": "Group Stage",
+          "players": [
+            "APA",
+            "CoreJJ",
+            "Pyosik",
+            "Summit",
+            "Yeon"
+          ]
+        },
+        {
+          "name": "Weibo Gaming",
+          "result": "Runner-up",
+          "players": [
+            "Crisp",
+            "Light",
+            "TheShy",
+            "Xiaohu",
+            "weiwei"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "teams": [
+        {
+          "name": "100 Thieves",
+          "result": "Group Stage",
+          "players": [
+            "Eyla",
+            "Quid",
+            "River",
+            "Sniper",
+            "Tomo"
+          ]
+        },
+        {
+          "name": "Bilibili Gaming",
+          "result": "Runner-up",
+          "players": [
+            "Bin",
+            "Elk",
+            "ON",
+            "XUN",
+            "knight"
+          ]
+        },
+        {
+          "name": "Dplus",
+          "result": "Group Stage",
+          "players": [
+            "Aiming",
+            "Kingen",
+            "Lucid",
+            "Moham",
+            "ShowMaker"
+          ]
+        },
+        {
+          "name": "FlyQuest",
+          "result": "Quarterfinals",
+          "players": [
+            "Busio",
+            "Bwipo",
+            "Inspired",
+            "Massu",
+            "Quad"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Group Stage",
+          "players": [
+            "Humanoid",
+            "Jun",
+            "Noah",
+            "Oscarinin",
+            "Razork"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Group Stage",
+          "players": [
+            "BrokenBlade",
+            "Caps",
+            "Hans Sama",
+            "Mikyx",
+            "Yike"
+          ]
+        },
+        {
+          "name": "GAM Esports",
+          "result": "Group Stage",
+          "players": [
+            "Easylove",
+            "Elio",
+            "Emo",
+            "Kiaya",
+            "Levi"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Semifinals",
+          "players": [
+            "Canyon",
+            "Chovy",
+            "Kiin",
+            "Lehends",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "Hanwha Life Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "Delight",
+            "Doran",
+            "Peanut",
+            "Viper",
+            "Zeka"
+          ]
+        },
+        {
+          "name": "LNG Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "GALA",
+            "Hang",
+            "Scout",
+            "Weiwei",
+            "Zika"
+          ]
+        },
+        {
+          "name": "MAD Lions KOI",
+          "result": "Group Stage",
+          "players": [
+            "Alvaro",
+            "Elyoya",
+            "Fresskowy",
+            "Myrwn",
+            "Supa"
+          ]
+        },
+        {
+          "name": "PSG Talon",
+          "result": "Group Stage",
+          "players": [
+            "Azhi",
+            "Betty",
+            "JunJia",
+            "Maple",
+            "Woody"
+          ]
+        },
+        {
+          "name": "Rainbow7",
+          "result": "Group Stage",
+          "players": [
+            "Ceo",
+            "Keine",
+            "Lyonz",
+            "Oddie",
+            "Summit"
+          ]
+        },
+        {
+          "name": "SoftBank HAWKS gaming",
+          "result": "Group Stage",
+          "players": [
+            "DasheR",
+            "Evi",
+            "Forest",
+            "Marble",
+            "Vsta"
+          ]
+        },
+        {
+          "name": "T1",
+          "result": "Champion",
+          "players": [
+            "Faker",
+            "Gumayusi",
+            "Keria",
+            "Oner",
+            "Zeus"
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "result": "Group Stage",
+          "players": [
+            "APA",
+            "CoreJJ",
+            "Impact",
+            "UmTi",
+            "Yeon"
+          ]
+        },
+        {
+          "name": "Top Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "369",
+            "Creme",
+            "JackeyLove",
+            "Meiko",
+            "Tian"
+          ]
+        },
+        {
+          "name": "Vikings Esports",
+          "result": "Group Stage",
+          "players": [
+            "Bie",
+            "Gury",
+            "Kati",
+            "Nanaue",
+            "Shogun"
+          ]
+        },
+        {
+          "name": "Weibo Gaming",
+          "result": "Semifinals",
+          "players": [
+            "Breathe",
+            "Crisp",
+            "Light",
+            "Tarzan",
+            "Xiaohu"
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Cariok",
+            "Kuri",
+            "TitaN",
+            "Wizer",
+            "dyNquedo"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "teams": [
+        {
+          "name": "100 Thieves",
+          "result": "Group Stage",
+          "players": [
+            "Dhokla",
+            "Eyla",
+            "FBI",
+            "Quid",
+            "River"
+          ]
+        },
+        {
+          "name": "Anyone's Legend",
+          "result": "Quarterfinals",
+          "players": [
+            "Flandre",
+            "Hope",
+            "Kael",
+            "Shanks",
+            "Tarzan"
+          ]
+        },
+        {
+          "name": "Bilibili Gaming",
+          "result": "Group Stage",
+          "players": [
+            "Bin",
+            "Elk",
+            "ON",
+            "knight",
+            "shad0w"
+          ]
+        },
+        {
+          "name": "CTBC Flying Oyster",
+          "result": "Quarterfinals",
+          "players": [
+            "Doggo",
+            "Driver",
+            "HongQ",
+            "JunJia",
+            "Kaiwing"
+          ]
+        },
+        {
+          "name": "FlyQuest",
+          "result": "Group Stage",
+          "players": [
+            "Busio",
+            "Bwipo",
+            "Inspired",
+            "Massu",
+            "Quad"
+          ]
+        },
+        {
+          "name": "Fnatic",
+          "result": "Group Stage",
+          "players": [
+            "Mikyx",
+            "Oscarinin",
+            "Poby",
+            "Razork",
+            "Upset"
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "BrokenBlade",
+            "Caps",
+            "Hans Sama",
+            "Labrov",
+            "SkewMond"
+          ]
+        },
+        {
+          "name": "Gen.G Esports",
+          "result": "Semifinals",
+          "players": [
+            "Canyon",
+            "Chovy",
+            "Duro",
+            "Kiin",
+            "Ruler"
+          ]
+        },
+        {
+          "name": "Hanwha Life Esports",
+          "result": "Quarterfinals",
+          "players": [
+            "Delight",
+            "Peanut",
+            "Viper",
+            "Zeka",
+            "Zeus"
+          ]
+        },
+        {
+          "name": "Invictus Gaming",
+          "result": "Group Stage",
+          "players": [
+            "GALA",
+            "Meiko",
+            "Rookie",
+            "TheShy",
+            "Wei"
+          ]
+        },
+        {
+          "name": "KT Rolster",
+          "result": "Runner-up",
+          "players": [
+            "Bdd",
+            "Cuzz",
+            "PerfecT",
+            "Peter",
+            "deokdam"
+          ]
+        },
+        {
+          "name": "Keyd Stars",
+          "result": "Group Stage",
+          "players": [
+            "Boal",
+            "Disamis",
+            "Mireu",
+            "Morttheus",
+            "Trymbi"
+          ]
+        },
+        {
+          "name": "Movistar KOI",
+          "result": "Group Stage",
+          "players": [
+            "Alvaro",
+            "Elyoya",
+            "Jojopyun",
+            "Myrwn",
+            "Supa"
+          ]
+        },
+        {
+          "name": "PSG Talon",
+          "result": "Group Stage",
+          "players": [
+            "Azhi",
+            "Betty",
+            "Karsa",
+            "Maple",
+            "Woody"
+          ]
+        },
+        {
+          "name": "Secret Whales",
+          "result": "Group Stage",
+          "players": [
+            "Dire",
+            "Eddie",
+            "Hiro02",
+            "Hizto",
+            "Taki"
+          ]
+        },
+        {
+          "name": "T1",
+          "result": "Champion",
+          "players": [
+            "Doran",
+            "Faker",
+            "Gumayusi",
+            "Keria",
+            "Oner"
+          ]
+        },
+        {
+          "name": "Top Esports",
+          "result": "Semifinals",
+          "players": [
+            "369",
+            "Creme",
+            "Hang",
+            "JackeyLove",
+            "Kanavi"
+          ]
+        }
+      ]
+    }
+  ]
+}
