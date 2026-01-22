@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { Player } from "@/types/player";
 import { POSITION_LABELS } from "@/types/player";
+import { getLatestTeamLogo } from "@/data/team-logos";
 
 interface PlayerCardProps {
   player: Player;
@@ -51,6 +53,7 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
   const borderStyle = gradeStyles[player.grade] || gradeStyles.COMMON;
   const textColor = gradeTextColors[player.grade] || gradeTextColors.COMMON;
   const glowColor = gradeGlowColors[player.grade] || gradeGlowColors.COMMON;
+  const teamLogo = getLatestTeamLogo(player.teams);
 
   return (
     <div
@@ -92,8 +95,18 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
             </span>
           </div>
 
-          <div className="flex-1 flex items-center justify-center text-4xl">
-            🎮
+          <div className="flex-1 flex items-center justify-center">
+            {teamLogo ? (
+              <Image
+                src={teamLogo}
+                alt={player.teams[player.teams.length - 1]}
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+            ) : (
+              <span className="text-4xl">🎮</span>
+            )}
           </div>
 
           <div className="text-center">
