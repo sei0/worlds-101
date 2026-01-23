@@ -18,11 +18,3 @@ const TEAM_LOGOS: Record<string, string> = {
 export function getTeamLogo(teamName: string): string | null {
   return TEAM_LOGOS[teamName] || null;
 }
-
-export function getLatestTeamLogo(teams: string[]): string | null {
-  for (let i = teams.length - 1; i >= 0; i--) {
-    const logo = getTeamLogo(teams[i]);
-    if (logo) return logo;
-  }
-  return null;
-}

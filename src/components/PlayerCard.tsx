@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import type { Player } from "@/types/player";
 import { POSITION_LABELS } from "@/types/player";
-import { getLatestTeamLogo } from "@/data/team-logos";
+import { getTeamLogo } from "@/data/team-logos";
 
 interface PlayerCardProps {
   player: Player;
@@ -36,6 +36,14 @@ const gradeGlowColors: Record<string, string> = {
   COMMON: "shadow-gray-400/40",
 };
 
+const RESULT_DISPLAY: Record<string, string> = {
+  "Champion": "🏆",
+  "Runner-up": "🥈",
+  "Semifinals": "🥉",
+  "Quarterfinals": "8강",
+  "Group Stage": "조별",
+};
+
 export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps) {
   const [isFlipping, setIsFlipping] = useState(false);
   const [showFront, setShowFront] = useState(revealed);
@@ -58,20 +66,29 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
     setTimeout(() => setIsFlipping(false), 400);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleClick();
+    }
+  };
+
   const borderStyle = gradeStyles[player.grade] || gradeStyles.COMMON;
   const textColor = gradeTextColors[player.grade] || gradeTextColors.COMMON;
   const glowColor = gradeGlowColors[player.grade] || gradeGlowColors.COMMON;
-  const teamLogo = getLatestTeamLogo(player.teams);
+  const teamLogo = getTeamLogo(player.team);
 
   return (
     <div
       className="perspective-1000"
       style={{ perspective: "1000px" }}
     >
-      <div
+      <button
+        type="button"
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
         className={`
-          w-40 h-56 relative cursor-pointer
+          w-40 h-56 relative cursor-pointer bg-transparent border-none p-0
           transition-transform duration-400 ease-out
           ${isFlipping ? "animate-flip" : ""}
           ${!revealed && !isFlipping ? "hover:scale-105 hover:-translate-y-1" : ""}
@@ -107,7 +124,7 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
             {teamLogo ? (
               <Image
                 src={teamLogo}
-                alt={player.teams[player.teams.length - 1]}
+                alt={player.team}
                 width={48}
                 height={48}
                 className="object-contain"
@@ -118,28 +135,31 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
           </div>
 
           <div className="text-center">
-            <div className="text-sm font-bold text-white mb-1 truncate">
+            <div className="text-sm font-bold text-white truncate">
               {player.name}
             </div>
-            <div className="text-[10px] text-gray-400">
-              {player.stats.championships > 0 && `🏆×${player.stats.championships} `}
-              {player.stats.appearances}회 출전
+            <div className="text-[10px] text-gray-400 truncate">
+              {player.team} · {player.year}
             </div>
           </div>
 
-          <div className="mt-1.5 text-[10px] text-gray-500 text-center truncate">
-            {player.teams.slice(0, 2).join(", ")}
-            {player.teams.length > 2 && ` +${player.teams.length - 2}`}
+          <div className="mt-1.5 flex items-center justify-center gap-1.5">
+            <span className="text-xs">
+              {RESULT_DISPLAY[player.result] || player.result}
+            </span>
+            <span className="text-[9px] text-gray-500">
+              {player.score}pt
+            </span>
           </div>
         </div>
 
         <div
           className="
             absolute inset-0 rounded-xl 
-            bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900
-            border-2 border-indigo-500/50 
+            bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950
+            border-2 border-blue-500/40 
             flex items-center justify-center
-            shadow-lg shadow-indigo-500/20
+            shadow-lg shadow-blue-500/20
           "
           style={{
             backfaceVisibility: "hidden",
@@ -148,13 +168,20 @@ export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps
           }}
         >
           <div className="text-center">
-            <div className="text-5xl mb-2 animate-pulse">❓</div>
-            <div className="text-xs text-indigo-300/70">탭하여 공개</div>
+            <Image
+              src="/summoner.svg"
+              alt="Summoner"
+              width={56}
+              height={56}
+              className="mx-auto mb-2 opacity-60 animate-pulse"
+              style={{ filter: "invert(1) brightness(0.7) sepia(1) hue-rotate(180deg) saturate(3)" }}
+            />
+            <div className="text-xs text-blue-300/70">탭하여 공개</div>
           </div>
-          <div className="absolute inset-2 border border-indigo-400/20 rounded-lg pointer-events-none" />
-          <div className="absolute inset-4 border border-indigo-400/10 rounded-md pointer-events-none" />
+          <div className="absolute inset-2 border border-blue-400/20 rounded-lg pointer-events-none" />
+          <div className="absolute inset-4 border border-blue-400/10 rounded-md pointer-events-none" />
         </div>
-      </div>
+      </button>
     </div>
   );
 }
