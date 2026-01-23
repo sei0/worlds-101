@@ -58,20 +58,6 @@ LCK players appear more frequently.
 | 2019-2021 | ×1.2 |
 | Before 2018 | ×0.3 |
 
-## 🚀 Getting Started
-
-```bash
-# Install dependencies
-bun install
-
-# Run dev server
-bun run dev
-
-# Production build
-bun run build
-```
-
-Open http://localhost:3000
 
 ## 📁 Project Structure
 
@@ -139,4 +125,4 @@ Data collected from publicly available sources (Leaguepedia).
 
 ---
 
-**Made with ❤️ for LoL Esports fans**
+**Made with ❤️ from LoL Esports fan**
