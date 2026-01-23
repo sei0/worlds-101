@@ -1,53 +1,108 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import type { Player } from "@/types/player";
-import { POSITION_LABELS } from "@/types/player";
 import { pullGacha } from "@/lib/gacha";
 import { simulateBattle, type BattleResult } from "@/lib/battle";
 import { PlayerCard } from "@/components/PlayerCard";
 import { Button } from "@base-ui/react/button";
 
+type Phase = "drawing" | "ready" | "battling" | "revealing" | "result";
+
 export default function BattlePage() {
   const [playerTeam, setPlayerTeam] = useState<Player[] | null>(null);
   const [opponentTeam, setOpponentTeam] = useState<Player[] | null>(null);
+  const [playerRevealed, setPlayerRevealed] = useState<Set<number>>(new Set());
+  const [opponentRevealed, setOpponentRevealed] = useState<Set<number>>(new Set());
   const [battleResult, setBattleResult] = useState<BattleResult | null>(null);
-  const [isBattling, setIsBattling] = useState(false);
+  const [phase, setPhase] = useState<Phase>("drawing");
   const [stats, setStats] = useState({ wins: 0, losses: 0, draws: 0 });
 
-  const handleDraw = () => {
+  const allPlayerRevealed = playerTeam ? playerRevealed.size >= playerTeam.length : false;
+  const allOpponentRevealed = opponentTeam ? opponentRevealed.size >= opponentTeam.length : false;
+
+  const initDraw = useCallback(() => {
     const newTeam = pullGacha();
     setPlayerTeam(newTeam);
-    setBattleResult(null);
+    setPlayerRevealed(new Set());
     setOpponentTeam(null);
+    setOpponentRevealed(new Set());
+    setBattleResult(null);
+    setPhase("drawing");
+  }, []);
+
+  useEffect(() => {
+    initDraw();
+  }, [initDraw]);
+
+  useEffect(() => {
+    if (allPlayerRevealed && phase === "drawing") {
+      setPhase("ready");
+    }
+  }, [allPlayerRevealed, phase]);
+
+  useEffect(() => {
+    if (phase === "revealing" && opponentTeam) {
+      if (opponentRevealed.size < opponentTeam.length) {
+        const timer = setTimeout(() => {
+          setOpponentRevealed((prev) => new Set([...prev, prev.size]));
+        }, 500);
+        return () => clearTimeout(timer);
+      } else {
+        const result = simulateBattle(playerTeam!, opponentTeam);
+        setBattleResult(result);
+        setPhase("result");
+        setStats((prev) => ({
+          wins: prev.wins + (result.winner === "player" ? 1 : 0),
+          losses: prev.losses + (result.winner === "opponent" ? 1 : 0),
+          draws: prev.draws + (result.winner === "draw" ? 1 : 0),
+        }));
+      }
+    }
+  }, [phase, opponentRevealed, opponentTeam, playerTeam]);
+
+  const handlePlayerCardClick = (index: number) => {
+    if (phase !== "drawing" || playerRevealed.has(index)) return;
+    setPlayerRevealed((prev) => new Set([...prev, index]));
   };
 
-  const handleBattle = () => {
-    if (!playerTeam) return;
+  const handleReDraw = () => {
+    initDraw();
+  };
 
-    setIsBattling(true);
+  const handleStartBattle = () => {
+    if (!playerTeam) return;
     const opponent = pullGacha();
     setOpponentTeam(opponent);
+    setOpponentRevealed(new Set());
+    setBattleResult(null);
+    setPhase("battling");
 
     setTimeout(() => {
-      const result = simulateBattle(playerTeam, opponent);
-      setBattleResult(result);
-      setIsBattling(false);
-
-      setStats((prev) => ({
-        wins: prev.wins + (result.winner === "player" ? 1 : 0),
-        losses: prev.losses + (result.winner === "opponent" ? 1 : 0),
-        draws: prev.draws + (result.winner === "draw" ? 1 : 0),
-      }));
-    }, 1000);
+      setPhase("revealing");
+    }, 800);
   };
 
-  const handleReset = () => {
-    setPlayerTeam(null);
-    setOpponentTeam(null);
+  const handleRematch = () => {
+    const opponent = pullGacha();
+    setOpponentTeam(opponent);
+    setOpponentRevealed(new Set());
     setBattleResult(null);
+    setPhase("battling");
+
+    setTimeout(() => {
+      setPhase("revealing");
+    }, 800);
   };
+
+  if (!playerTeam) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 flex items-center justify-center">
+        <div className="text-6xl animate-bounce">⚔️</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 px-5 py-10">
@@ -57,150 +112,139 @@ export default function BattlePage() {
             href="/"
             className="text-gray-400 hover:text-white text-sm mb-4 inline-block"
           >
-            ← 뽑기로 돌아가기
+            ← Back to Gacha
           </Link>
-          <h1 className="text-3xl font-bold mb-2 text-white">
-            팀 배틀
-          </h1>
+          <h1 className="text-3xl font-bold mb-2 text-white">Team Battle</h1>
           <p className="text-gray-400 text-sm">
-            {stats.wins}승 {stats.losses}패 {stats.draws}무
+            {stats.wins}W {stats.losses}L {stats.draws}D
           </p>
         </header>
 
-        {!playerTeam && (
-          <div className="text-center py-16">
-            <p className="text-gray-300 mb-8">
-              먼저 당신의 팀을 뽑으세요!
-            </p>
-            <Button
-              onClick={handleDraw}
-              className="px-8 py-4 text-lg font-bold text-slate-900 rounded-xl
-                         bg-white hover:bg-gray-100
-                         hover:scale-105 transition-all cursor-pointer"
-            >
-              🎰 팀 뽑기
-            </Button>
+        <div className="space-y-8">
+          <div>
+            <h2 className="text-xl font-bold text-blue-400 mb-2 text-center">
+              Your Team
+            </h2>
+            {phase === "drawing" && !allPlayerRevealed && (
+              <p className="text-gray-400 text-sm mb-4 text-center animate-pulse">
+                Tap cards to reveal ({playerRevealed.size}/{playerTeam.length})
+              </p>
+            )}
+            <div className="flex gap-3 justify-center flex-wrap">
+              {playerTeam.map((player, i) => (
+                <div key={player.id + i} className="text-center">
+                  <PlayerCard
+                    player={player}
+                    revealed={playerRevealed.has(i)}
+                    onClick={() => handlePlayerCardClick(i)}
+                  />
+                  {playerRevealed.has(i) && (
+                    <div className="mt-2 text-sm font-medium text-gray-400">
+                      {player.score}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        )}
 
-        {playerTeam && (
-          <div className="space-y-8">
+          {phase === "ready" && (
+            <div className="text-center py-4 flex gap-4 justify-center flex-wrap">
+              <Button
+                onClick={handleReDraw}
+                className="px-6 py-3 font-bold text-white rounded-lg
+                           bg-slate-700 hover:bg-slate-600
+                           hover:scale-105 transition-all cursor-pointer"
+              >
+                🔄 Re-draw
+              </Button>
+              <Button
+                onClick={handleStartBattle}
+                className="px-8 py-4 text-lg font-bold text-slate-900 rounded-xl
+                           bg-white hover:bg-gray-100
+                           hover:scale-105 transition-all cursor-pointer"
+              >
+                ⚔️ Start Battle!
+              </Button>
+            </div>
+          )}
+
+          {phase === "battling" && (
+            <div className="text-center py-8">
+              <div className="text-5xl animate-bounce">⚔️</div>
+              <p className="text-gray-400 mt-4">Finding opponent...</p>
+            </div>
+          )}
+
+          {opponentTeam && phase !== "battling" && (
             <div>
-              <h2 className="text-xl font-bold text-blue-400 mb-4 text-center">
-                내 팀
+              <h2 className="text-xl font-bold text-red-400 mb-2 text-center">
+                Opponent Team
               </h2>
+              {phase === "revealing" && (
+                <p className="text-gray-400 text-sm mb-4 text-center animate-pulse">
+                  Revealing... ({opponentRevealed.size}/{opponentTeam.length})
+                </p>
+              )}
               <div className="flex gap-3 justify-center flex-wrap">
-                {playerTeam.map((player, i) => (
+                {opponentTeam.map((player, i) => (
                   <div key={player.id + i} className="text-center">
-                    <PlayerCard player={player} revealed={true} />
-                    {battleResult && (
-                      <div
-                        className={`mt-2 text-sm font-bold ${
-                          battleResult.rounds[i].winner === "player"
-                            ? "text-green-400"
-                            : battleResult.rounds[i].winner === "opponent"
-                            ? "text-red-400"
-                            : "text-gray-400"
-                        }`}
-                      >
-                        {battleResult.rounds[i].playerPower}
+                    <PlayerCard
+                      player={player}
+                      revealed={opponentRevealed.has(i)}
+                    />
+                    {opponentRevealed.has(i) && (
+                      <div className="mt-2 text-sm font-medium text-gray-400">
+                        {player.score}
                       </div>
                     )}
                   </div>
                 ))}
               </div>
             </div>
+          )}
 
-            {!battleResult && !isBattling && (
-              <div className="text-center">
+          {phase === "result" && battleResult && (
+            <div className="text-center py-6">
+              <div
+                className={`text-4xl font-bold mb-4 ${
+                  battleResult.winner === "player"
+                    ? "text-green-400"
+                    : battleResult.winner === "opponent"
+                    ? "text-red-400"
+                    : "text-yellow-400"
+                }`}
+              >
+                {battleResult.winner === "player"
+                  ? "🎉 Victory!"
+                  : battleResult.winner === "opponent"
+                  ? "😢 Defeat..."
+                  : "🤝 Draw"}
+              </div>
+              <div className="text-gray-400 mb-6">
+                {battleResult.playerScore} vs {battleResult.opponentScore}
+              </div>
+              <div className="flex gap-4 justify-center flex-wrap">
                 <Button
-                  onClick={handleBattle}
-                  className="px-8 py-4 text-lg font-bold text-slate-900 rounded-xl
+                  onClick={handleRematch}
+                  className="px-6 py-3 font-bold text-slate-900 rounded-lg
                              bg-white hover:bg-gray-100
                              hover:scale-105 transition-all cursor-pointer"
                 >
-                  ⚔️ 배틀 시작!
+                  ⚔️ Rematch
+                </Button>
+                <Button
+                  onClick={handleReDraw}
+                  className="px-6 py-3 font-bold text-white rounded-lg
+                             bg-slate-700 hover:bg-slate-600
+                             transition-all cursor-pointer"
+                >
+                  🔄 New Team
                 </Button>
               </div>
-            )}
-
-            {isBattling && (
-              <div className="text-center py-8">
-                <div className="text-4xl animate-bounce">⚔️</div>
-                <p className="text-gray-400 mt-4">대전 중...</p>
-              </div>
-            )}
-
-            {opponentTeam && (
-              <div>
-                <h2 className="text-xl font-bold text-red-400 mb-4 text-center">
-                  상대 팀
-                </h2>
-                <div className="flex gap-3 justify-center flex-wrap">
-                  {opponentTeam.map((player, i) => (
-                    <div key={player.id + i} className="text-center">
-                      <PlayerCard player={player} revealed={true} />
-                      {battleResult && (
-                        <div
-                          className={`mt-2 text-sm font-bold ${
-                            battleResult.rounds[i].winner === "opponent"
-                              ? "text-green-400"
-                              : battleResult.rounds[i].winner === "player"
-                              ? "text-red-400"
-                              : "text-gray-400"
-                          }`}
-                        >
-                          {battleResult.rounds[i].opponentPower}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {battleResult && (
-              <div className="text-center py-6">
-                <div
-                  className={`text-4xl font-bold mb-4 ${
-                    battleResult.winner === "player"
-                      ? "text-green-400"
-                      : battleResult.winner === "opponent"
-                      ? "text-red-400"
-                      : "text-yellow-400"
-                  }`}
-                >
-                  {battleResult.winner === "player"
-                    ? "🎉 승리!"
-                    : battleResult.winner === "opponent"
-                    ? "😢 패배..."
-                    : "🤝 무승부"}
-                </div>
-                <div className="text-gray-400 mb-6">
-                  {battleResult.playerScore} vs {battleResult.opponentScore}
-                </div>
-                <div className="flex gap-4 justify-center">
-                  <Button
-                    onClick={handleBattle}
-                    className="px-6 py-3 font-bold text-slate-900 rounded-lg
-                               bg-white hover:bg-gray-100
-                               hover:scale-105 transition-all cursor-pointer"
-                  >
-                    다시 배틀
-                  </Button>
-                  <Button
-                    onClick={handleReset}
-                    className="px-6 py-3 font-bold text-white rounded-lg
-                               bg-slate-700 hover:bg-slate-600
-                               transition-all cursor-pointer"
-                  >
-                    새 팀 뽑기
-                  </Button>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

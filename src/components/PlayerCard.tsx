@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import type { Player } from "@/types/player";
 import { POSITION_LABELS } from "@/types/player";
@@ -39,6 +39,14 @@ const gradeGlowColors: Record<string, string> = {
 export function PlayerCard({ player, revealed = true, onClick }: PlayerCardProps) {
   const [isFlipping, setIsFlipping] = useState(false);
   const [showFront, setShowFront] = useState(revealed);
+
+  useEffect(() => {
+    if (revealed && !showFront) {
+      setIsFlipping(true);
+      setTimeout(() => setShowFront(true), 150);
+      setTimeout(() => setIsFlipping(false), 400);
+    }
+  }, [revealed, showFront]);
 
   const handleClick = () => {
     if (revealed || isFlipping || !onClick) return;
