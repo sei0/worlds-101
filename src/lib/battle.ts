@@ -1,4 +1,4 @@
-import type { Player, Grade } from "@/types/player";
+import type { Player, Grade, Result } from "@/types/player";
 
 const GRADE_POWER: Record<Grade, number> = {
   LEGENDARY: 95,
@@ -6,6 +6,14 @@ const GRADE_POWER: Record<Grade, number> = {
   RARE: 65,
   UNCOMMON: 50,
   COMMON: 35,
+};
+
+const RESULT_BONUS: Record<Result, number> = {
+  "Champion": 15,
+  "Runner-up": 10,
+  "Semifinals": 5,
+  "Quarterfinals": 2,
+  "Group Stage": 0,
 };
 
 export interface BattleResult {
@@ -22,13 +30,13 @@ export interface RoundResult {
   winner: "player" | "opponent" | "draw";
 }
 
-function calculateBattlePower(player: Player): number {
-  const basePower = GRADE_POWER[player.grade];
-  const expBonus = Math.min(player.stats.appearances * 2, 15);
-  const champBonus = player.stats.championships * 5;
+function calculateBattlePower(card: Player): number {
+  const basePower = GRADE_POWER[card.grade];
+  const resultBonus = RESULT_BONUS[card.result];
+  const recencyBonus = card.year >= 2022 ? 5 : card.year >= 2019 ? 2 : 0;
   const randomFactor = Math.random() * 20 - 10;
   
-  return Math.round(basePower + expBonus + champBonus + randomFactor);
+  return Math.round(basePower + resultBonus + recencyBonus + randomFactor);
 }
 
 export function simulateBattle(

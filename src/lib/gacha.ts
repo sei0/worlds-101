@@ -1,4 +1,4 @@
-import type { Player, Position, Grade } from "@/types/player";
+import type { Player, PlayerCareer, Position, Grade } from "@/types/player";
 import { GRADE_PROBABILITIES } from "@/types/player";
 import playerData from "@/data/players.json";
 
@@ -29,21 +29,17 @@ const LEC_TEAMS = new Set([
 
 type Region = "LCK" | "LPL" | "LEC" | "OTHER";
 
-function getPlayerRegion(player: Player): Region {
-  if (player.teams.some((team) => LCK_TEAMS.has(team))) return "LCK";
-  if (player.teams.some((team) => LPL_TEAMS.has(team))) return "LPL";
-  if (player.teams.some((team) => LEC_TEAMS.has(team))) return "LEC";
+function getCardRegion(player: Player): Region {
+  if (LCK_TEAMS.has(player.team)) return "LCK";
+  if (LPL_TEAMS.has(player.team)) return "LPL";
+  if (LEC_TEAMS.has(player.team)) return "LEC";
   return "OTHER";
-}
-
-function getLatestYear(player: Player): number {
-  return Math.max(...player.years);
 }
 
 function calculateWeight(player: Player): number {
   let weight = 1.0;
 
-  const region = getPlayerRegion(player);
+  const region = getCardRegion(player);
   switch (region) {
     case "LCK":
       weight *= 2.5;
@@ -59,19 +55,18 @@ function calculateWeight(player: Player): number {
       break;
   }
 
-  const latestYear = getLatestYear(player);
-  if (latestYear >= 2022) {
+  if (player.year >= 2022) {
     weight *= 2.0;
-  } else if (latestYear >= 2019) {
+  } else if (player.year >= 2019) {
     weight *= 1.2;
-  } else if (latestYear <= 2017) {
+  } else if (player.year <= 2017) {
     weight *= 0.3;
   }
 
   return weight;
 }
 
-function getPlayersByPosition(position: Position): Player[] {
+function getCardsByPosition(position: Position): Player[] {
   return (playerData.players as Player[]).filter((p) => p.position === position);
 }
 
@@ -102,35 +97,35 @@ function weightedRandomPick(players: Player[]): Player {
   return players[players.length - 1];
 }
 
-function pickPlayerByGrade(players: Player[], targetGrade: Grade): Player {
+function pickCardByGrade(cards: Player[], targetGrade: Grade): Player {
   const gradeOrder: Grade[] = ["LEGENDARY", "EPIC", "RARE", "UNCOMMON", "COMMON"];
   const targetIndex = gradeOrder.indexOf(targetGrade);
 
   for (let i = targetIndex; i < gradeOrder.length; i++) {
-    const candidates = players.filter((p) => p.grade === gradeOrder[i]);
+    const candidates = cards.filter((p) => p.grade === gradeOrder[i]);
     if (candidates.length > 0) {
       return weightedRandomPick(candidates);
     }
   }
 
   for (let i = targetIndex - 1; i >= 0; i--) {
-    const candidates = players.filter((p) => p.grade === gradeOrder[i]);
+    const candidates = cards.filter((p) => p.grade === gradeOrder[i]);
     if (candidates.length > 0) {
       return weightedRandomPick(candidates);
     }
   }
 
-  return weightedRandomPick(players);
+  return weightedRandomPick(cards);
 }
 
 export function pullGacha(): Player[] {
   const team: Player[] = [];
 
   for (const position of POSITIONS) {
-    const positionPlayers = getPlayersByPosition(position);
+    const positionCards = getCardsByPosition(position);
     const grade = rollGrade();
-    const player = pickPlayerByGrade(positionPlayers, grade);
-    team.push(player);
+    const card = pickCardByGrade(positionCards, grade);
+    team.push(card);
   }
 
   return team;
@@ -140,10 +135,22 @@ export function calculateTeamPower(team: Player[]): number {
   return team.reduce((sum, player) => sum + player.score, 0);
 }
 
-export function getAllPlayers(): Player[] {
+export function getAllCards(): Player[] {
   return playerData.players as Player[];
 }
 
-export function getPlayerById(id: string): Player | undefined {
+export function getCardById(id: string): Player | undefined {
   return (playerData.players as Player[]).find((p) => p.id === id);
+}
+
+export function getAllCareers(): PlayerCareer[] {
+  return (playerData as { careers: PlayerCareer[] }).careers;
+}
+
+export function getCareerByPlayerId(playerId: string): PlayerCareer | undefined {
+  return getAllCareers().find((c) => c.playerId === playerId);
+}
+
+export function getCardsByPlayerId(playerId: string): Player[] {
+  return getAllCards().filter((p) => p.playerId === playerId);
 }

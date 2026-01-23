@@ -2,14 +2,14 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import type { Player } from "@/types/player";
-import { getAllPlayers } from "@/lib/gacha";
+import { getAllCards, getAllCareers } from "@/lib/gacha";
 import { getCollection } from "@/lib/collection";
 import { CHALLENGES } from "@/lib/challenges";
 
 export default function ChallengesPage() {
   const [collected, setCollected] = useState<Set<string>>(new Set());
-  const allPlayers = useMemo(() => getAllPlayers(), []);
+  const allCards = useMemo(() => getAllCards(), []);
+  const careers = useMemo(() => getAllCareers(), []);
 
   useEffect(() => {
     const state = getCollection();
@@ -19,10 +19,10 @@ export default function ChallengesPage() {
   const challengeStatus = useMemo(() => {
     return CHALLENGES.map((challenge) => ({
       ...challenge,
-      completed: challenge.requirement(collected, allPlayers),
-      progress: challenge.progress(collected, allPlayers),
+      completed: challenge.requirement(collected, allCards, careers),
+      progress: challenge.progress(collected, allCards, careers),
     }));
-  }, [collected, allPlayers]);
+  }, [collected, allCards, careers]);
 
   const completedCount = challengeStatus.filter((c) => c.completed).length;
 
