@@ -3,11 +3,12 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import type { Player } from "@/types/player";
-import { pullGacha, getAllPlayers } from "@/lib/gacha";
+import { pullGacha, getAllCards } from "@/lib/gacha";
 import { addToCollection, getCollection } from "@/lib/collection";
 import { GachaResult } from "@/components/GachaResult";
+import { MeshBackground } from "@/components/MeshBackground";
 
-const TOTAL_PLAYERS = getAllPlayers().length;
+const TOTAL_CARDS = getAllCards().length;
 
 export default function Home() {
   const [team, setTeam] = useState<Player[] | null>(null);
@@ -39,7 +40,8 @@ export default function Home() {
 
   if (!isInitialized) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center relative">
+        <MeshBackground />
         <div className="text-center">
           <div className="text-6xl animate-bounce mb-4">🎰</div>
           <p className="text-gray-400">카드를 섞는 중...</p>
@@ -49,8 +51,9 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 px-5 py-10">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen px-5 py-10 relative">
+      <MeshBackground />
+      <div className="max-w-4xl mx-auto relative z-10">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-2 text-white">
             LoL Worlds Gacha
@@ -63,7 +66,7 @@ export default function Home() {
               href="/collection"
               className="text-indigo-400 hover:text-indigo-300 text-sm underline"
             >
-              📖 도감 ({collectionSize}/{TOTAL_PLAYERS})
+              📖 도감 ({collectionSize}/{TOTAL_CARDS})
             </Link>
             <Link
               href="/battle"
@@ -88,7 +91,7 @@ export default function Home() {
         </main>
 
         <footer className="mt-16 text-center text-gray-600 text-xs">
-          Data from Leaguepedia • {TOTAL_PLAYERS} Players • 2013-2024
+          Data from Leaguepedia • {TOTAL_CARDS} Cards • 2013-2025
         </footer>
       </div>
     </div>
