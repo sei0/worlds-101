@@ -50,17 +50,17 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen px-5 py-10 relative">
+    <div className="min-h-screen px-3 sm:px-5 py-6 sm:py-10 relative">
       <MeshBackground />
       <div className="max-w-4xl mx-auto relative z-10">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">
+        <header className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">
             LOL WORLDS GACHA
           </h1>
           <p className="text-gray-400 text-sm">
             Collect cards from Worlds 2013-2024
           </p>
-          <div className="mt-4 flex justify-center gap-4 flex-wrap">
+          <div className="mt-4 flex justify-center gap-3 sm:gap-4 flex-wrap">
             <Link
               href="/collection"
               className="text-indigo-400 hover:text-indigo-300 text-sm underline"

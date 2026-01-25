@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import type { Player } from "@/types/player";
 import { PlayerCard } from "./PlayerCard";
 import { Button } from "@base-ui/react/button";
@@ -16,6 +16,7 @@ export function GachaResult({ team, onReset }: GachaResultProps) {
   const [isExiting, setIsExiting] = useState(false);
   const [screenEffect, setScreenEffect] = useState<"none" | "flash" | "shake">("none");
   const [isAutoRevealing, setIsAutoRevealing] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleCardClick = useCallback((index: number) => {
     if (revealedCards.has(index) || isAutoRevealing) return;
@@ -33,7 +34,20 @@ export function GachaResult({ team, onReset }: GachaResultProps) {
     if (isAutoRevealing) return;
     setIsAutoRevealing(true);
     
-    const unrevealed = team.map((_, i) => i).filter(i => !revealedCards.has(i));
+    const gradeOrder: Record<string, number> = {
+      COMMON: 0,
+      UNCOMMON: 1,
+      RARE: 2,
+      EPIC: 3,
+      LEGENDARY: 4,
+      DEMON_KING: 5,
+    };
+    
+    const unrevealed = team
+      .map((player, i) => ({ index: i, grade: player.grade }))
+      .filter(({ index }) => !revealedCards.has(index))
+      .sort((a, b) => gradeOrder[a.grade] - gradeOrder[b.grade])
+      .map(({ index }) => index);
     
     unrevealed.forEach((cardIndex, i) => {
       setTimeout(() => {
@@ -54,7 +68,11 @@ export function GachaResult({ team, onReset }: GachaResultProps) {
   }, [isAutoRevealing, team, revealedCards]);
 
   const handleReset = useCallback(() => {
+    const scrollY = window.scrollY;
     onReset();
+    requestAnimationFrame(() => {
+      window.scrollTo(0, scrollY);
+    });
   }, [onReset]);
 
   useEffect(() => {
@@ -77,7 +95,7 @@ export function GachaResult({ team, onReset }: GachaResultProps) {
         <div className="fixed inset-0 bg-yellow-400/30 animate-screen-flash pointer-events-none z-50" />
       )}
       
-      <div className="flex gap-4 justify-center flex-wrap mb-6">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:justify-center sm:flex-wrap mb-6 px-2 sm:px-0">
         {team.map((player, index) => (
           <PlayerCard
             key={player.id + index}

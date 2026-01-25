@@ -70,7 +70,7 @@ export default function CollectionPage() {
   const progressPercent = Math.round((stats.collected / stats.total) * 100);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 px-5 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 px-3 sm:px-5 py-6 sm:py-10">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-8">
           <Link
@@ -79,7 +79,7 @@ export default function CollectionPage() {
           >
             ← Back to Gacha
           </Link>
-          <h1 className="text-3xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">
             Card Collection
           </h1>
           <p className="text-gray-400 text-sm">
@@ -94,11 +94,11 @@ export default function CollectionPage() {
           />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-2 sm:gap-4 mb-8">
           {(["DEMON_KING", "LEGENDARY", "EPIC", "RARE", "UNCOMMON", "COMMON"] as Grade[]).map((grade) => (
             <div
               key={grade}
-              className={`bg-slate-800 rounded-lg p-3 text-center ${grade === "DEMON_KING" ? "animate-pulse" : ""}`}
+              className={`bg-slate-800 rounded-lg p-2 sm:p-3 text-center ${grade === "DEMON_KING" ? "animate-pulse" : ""}`}
               style={{ borderLeft: `3px solid ${GRADE_COLORS[grade]}` }}
             >
               <div className="text-xs text-gray-400 mb-1">{grade === "DEMON_KING" ? "👹 DEMON KING" : grade}</div>
@@ -109,12 +109,12 @@ export default function CollectionPage() {
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 mb-6">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-6">
           <div className="flex gap-2">
             <button
               type="button"
               onClick={() => setViewMode("cards")}
-              className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 viewMode === "cards"
                   ? "bg-indigo-600 text-white"
                   : "bg-slate-800 text-gray-400 hover:text-white border border-slate-600"
@@ -125,7 +125,7 @@ export default function CollectionPage() {
             <button
               type="button"
               onClick={() => setViewMode("players")}
-              className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 viewMode === "players"
                   ? "bg-indigo-600 text-white"
                   : "bg-slate-800 text-gray-400 hover:text-white border border-slate-600"
@@ -135,12 +135,12 @@ export default function CollectionPage() {
             </button>
           </div>
 
-          <div className="h-6 w-px bg-slate-700" />
+          <div className="hidden sm:block h-6 w-px bg-slate-700" />
 
           <select
             value={filterGrade}
             onChange={(e) => setFilterGrade(e.target.value as FilterGrade)}
-            className="bg-slate-800 text-white pl-4 pr-8 py-2.5 rounded-lg border border-slate-600 text-sm cursor-pointer hover:border-slate-500 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22%239ca3af%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2011L3%206h10l-5%205z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_12px_center] bg-no-repeat"
+            className="bg-slate-800 text-white pl-3 pr-7 sm:pl-4 sm:pr-8 py-2 sm:py-2.5 rounded-lg border border-slate-600 text-sm cursor-pointer hover:border-slate-500 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22%239ca3af%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2011L3%206h10l-5%205z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_8px_center] sm:bg-[right_12px_center] bg-no-repeat"
           >
             <option value="ALL">All Grades</option>
             <option value="DEMON_KING">👹 Demon King</option>
@@ -154,7 +154,7 @@ export default function CollectionPage() {
           <select
             value={filterPosition}
             onChange={(e) => setFilterPosition(e.target.value as FilterPosition)}
-            className="bg-slate-800 text-white pl-4 pr-8 py-2.5 rounded-lg border border-slate-600 text-sm cursor-pointer hover:border-slate-500 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22%239ca3af%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2011L3%206h10l-5%205z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_12px_center] bg-no-repeat"
+            className="bg-slate-800 text-white pl-3 pr-7 sm:pl-4 sm:pr-8 py-2 sm:py-2.5 rounded-lg border border-slate-600 text-sm cursor-pointer hover:border-slate-500 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22%239ca3af%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2011L3%206h10l-5%205z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_8px_center] sm:bg-[right_12px_center] bg-no-repeat"
           >
             <option value="ALL">All Positions</option>
             {(["TOP", "JGL", "MID", "ADC", "SUP"] as Position[]).map((pos) => (
@@ -167,7 +167,7 @@ export default function CollectionPage() {
           <select
             value={filterYear}
             onChange={(e) => setFilterYear(e.target.value === "ALL" ? "ALL" : Number(e.target.value))}
-            className="bg-slate-800 text-white pl-4 pr-8 py-2.5 rounded-lg border border-slate-600 text-sm cursor-pointer hover:border-slate-500 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22%239ca3af%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2011L3%206h10l-5%205z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_12px_center] bg-no-repeat"
+            className="bg-slate-800 text-white pl-3 pr-7 sm:pl-4 sm:pr-8 py-2 sm:py-2.5 rounded-lg border border-slate-600 text-sm cursor-pointer hover:border-slate-500 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22%239ca3af%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2011L3%206h10l-5%205z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_8px_center] sm:bg-[right_12px_center] bg-no-repeat"
           >
             <option value="ALL">All Years</option>
             {years.map((year) => (
@@ -177,7 +177,7 @@ export default function CollectionPage() {
             ))}
           </select>
 
-          <div className="h-6 w-px bg-slate-700" />
+          <div className="hidden sm:block h-6 w-px bg-slate-700" />
 
           <label className="flex items-center gap-2 text-gray-300 text-sm cursor-pointer select-none">
             <input
@@ -197,18 +197,34 @@ export default function CollectionPage() {
         </div>
 
         {viewMode === "cards" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredCards.map((card) => (
-              <div
-                key={card.id}
-                className={`transition-all duration-200 ${
-                  collected.has(card.id) ? "" : "opacity-40 grayscale"
-                }`}
-              >
-                <PlayerCard player={card} revealed={true} />
-              </div>
-            ))}
-          </div>
+          <>
+            {/* Mobile: Horizontal list layout */}
+            <div className="flex flex-col gap-2 sm:hidden px-2">
+              {filteredCards.map((card) => (
+                <div
+                  key={card.id}
+                  className={`transition-all duration-200 ${
+                    collected.has(card.id) ? "" : "opacity-40 grayscale"
+                  }`}
+                >
+                  <PlayerCard player={card} revealed={true} />
+                </div>
+              ))}
+            </div>
+            {/* Desktop: Grid layout */}
+            <div className="hidden sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+              {filteredCards.map((card) => (
+                <div
+                  key={card.id}
+                  className={`transition-all duration-200 ${
+                    collected.has(card.id) ? "" : "opacity-40 grayscale"
+                  }`}
+                >
+                  <PlayerCard player={card} revealed={true} />
+                </div>
+              ))}
+            </div>
+          </>
         ) : (
           <div className="space-y-4">
             {groupedByPlayer.map(([playerId, cards]) => {

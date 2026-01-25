@@ -105,7 +105,7 @@ export default function BattlePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 px-5 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 px-3 sm:px-5 py-6 sm:py-10">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-8">
           <Link
@@ -114,7 +114,7 @@ export default function BattlePage() {
           >
             ← Back to Gacha
           </Link>
-          <h1 className="text-3xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">Team Battle</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">Team Battle</h1>
           <p className="text-gray-400 text-sm">
             {stats.wins}W {stats.losses}L {stats.draws}D
           </p>
@@ -130,19 +130,14 @@ export default function BattlePage() {
                 Tap cards to reveal ({playerRevealed.size}/{playerTeam.length})
               </p>
             )}
-            <div className="flex gap-3 justify-center flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:justify-center sm:flex-wrap px-2 sm:px-0">
               {playerTeam.map((player, i) => (
-                <div key={player.id + i} className="text-center">
+                <div key={player.id + i} className="sm:text-center">
                   <PlayerCard
                     player={player}
                     revealed={playerRevealed.has(i)}
                     onClick={() => handlePlayerCardClick(i)}
                   />
-                  {playerRevealed.has(i) && (
-                    <div className="mt-2 text-sm font-medium text-gray-400">
-                      {player.score}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -186,18 +181,13 @@ export default function BattlePage() {
                   Revealing... ({opponentRevealed.size}/{opponentTeam.length})
                 </p>
               )}
-              <div className="flex gap-3 justify-center flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:justify-center sm:flex-wrap px-2 sm:px-0">
                 {opponentTeam.map((player, i) => (
-                  <div key={player.id + i} className="text-center">
+                  <div key={player.id + i} className="sm:text-center">
                     <PlayerCard
                       player={player}
                       revealed={opponentRevealed.has(i)}
                     />
-                    {opponentRevealed.has(i) && (
-                      <div className="mt-2 text-sm font-medium text-gray-400">
-                        {player.score}
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
