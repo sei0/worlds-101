@@ -34,8 +34,7 @@ export default function Home() {
   }, [doPull]);
 
   const handleReset = () => {
-    setTeam(null);
-    setTimeout(() => doPull(), 100);
+    doPull();
   };
 
   if (!isInitialized) {
@@ -44,7 +43,7 @@ export default function Home() {
         <MeshBackground />
         <div className="text-center">
           <div className="text-6xl animate-bounce mb-4">🎰</div>
-          <p className="text-gray-400">카드를 섞는 중...</p>
+          <p className="text-gray-400">Shuffling cards...</p>
         </div>
       </div>
     );
@@ -55,33 +54,33 @@ export default function Home() {
       <MeshBackground />
       <div className="max-w-4xl mx-auto relative z-10">
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-2 text-white">
-            LoL Worlds Gacha
+          <h1 className="text-4xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">
+            LOL WORLDS GACHA
           </h1>
           <p className="text-gray-400 text-sm">
-            2013-2024 월드 챔피언십 역대 선수 가챠
+            Collect cards from Worlds 2013-2024
           </p>
           <div className="mt-4 flex justify-center gap-4 flex-wrap">
             <Link
               href="/collection"
               className="text-indigo-400 hover:text-indigo-300 text-sm underline"
             >
-              📖 도감 ({collectionSize}/{TOTAL_CARDS})
+              📖 Collection ({collectionSize}/{TOTAL_CARDS})
             </Link>
             <Link
               href="/battle"
               className="text-red-400 hover:text-red-300 text-sm underline"
             >
-              ⚔️ 배틀
+              ⚔️ Battle
             </Link>
             <Link
               href="/challenges"
               className="text-yellow-400 hover:text-yellow-300 text-sm underline"
             >
-              🏆 챌린지
+              🏆 Challenges
             </Link>
             <span className="text-gray-500 text-sm">
-              🎰 {pullCount}회 뽑기
+              🎰 {pullCount} Pulls
             </span>
           </div>
         </header>
@@ -92,6 +91,8 @@ export default function Home() {
 
         <footer className="mt-16 text-center text-gray-600 text-xs">
           Data from Leaguepedia • {TOTAL_CARDS} Cards • 2013-2025
+          <br />  
+          Made with ❤️ by Faker fan Sei
         </footer>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import type { Player, Grade, Result } from "@/types/player";
 
 const GRADE_POWER: Record<Grade, number> = {
+  DEMON_KING: 100,
   LEGENDARY: 95,
   EPIC: 80,
   RARE: 65,

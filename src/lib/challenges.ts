@@ -23,8 +23,8 @@ function getCollectedPlayerIds(collected: Set<string>, allCards: Player[]): Set<
 export const CHALLENGES: Challenge[] = [
   {
     id: "faker-fan",
-    name: "Faker의 팬",
-    description: "Faker 카드를 1장 수집하세요",
+    name: "Faker Fan",
+    description: "Collect 1 Faker card",
     icon: "👑",
     requirement: (collected, allCards) => {
       return allCards.some((c) => c.playerId === "faker" && collected.has(c.id));
@@ -36,8 +36,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "faker-complete",
-    name: "Faker 컴플리트",
-    description: "모든 Faker 카드를 수집하세요 (10장)",
+    name: "Faker Complete",
+    description: "Collect all Faker cards (10 cards)",
     icon: "🐐",
     requirement: (collected, allCards) => {
       const fakerCards = allCards.filter((c) => c.playerId === "faker");
@@ -54,7 +54,7 @@ export const CHALLENGES: Challenge[] = [
   {
     id: "t1-dynasty",
     name: "T1 Dynasty",
-    description: "T1/SKT 우승 카드 5장을 수집하세요",
+    description: "Collect 5 T1/SKT championship cards",
     icon: "🏆",
     requirement: (collected, allCards) => {
       const t1ChampionCards = allCards.filter(
@@ -78,8 +78,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "legendary-collector",
-    name: "레전드 헌터",
-    description: "LEGENDARY 등급 카드 5장을 수집하세요",
+    name: "Legend Hunter",
+    description: "Collect 5 LEGENDARY grade cards",
     icon: "🌟",
     requirement: (collected, allCards) => {
       const legendaries = allCards.filter((c) => c.grade === "LEGENDARY");
@@ -95,8 +95,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "full-roster",
-    name: "풀 로스터",
-    description: "각 포지션에서 최소 10장씩 수집하세요",
+    name: "Full Roster",
+    description: "Collect at least 10 cards from each position",
     icon: "📋",
     requirement: (collected, allCards) => {
       const positions = ["TOP", "JGL", "MID", "ADC", "SUP"] as const;
@@ -118,8 +118,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "champion-cards",
-    name: "월드 챔피언",
-    description: "우승 카드 10장을 수집하세요",
+    name: "World Champion",
+    description: "Collect 10 championship cards",
     icon: "🥇",
     requirement: (collected, allCards) => {
       const championCards = allCards.filter((c) => c.result === "Champion");
@@ -135,8 +135,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "veteran-players",
-    name: "베테랑 수집가",
-    description: "5회 이상 출전한 선수의 카드를 15명분 수집하세요",
+    name: "Veteran Collector",
+    description: "Collect cards from 15 players with 5+ appearances",
     icon: "🎖️",
     requirement: (collected, allCards, careers) => {
       const collectedPlayerIds = getCollectedPlayerIds(collected, allCards);
@@ -154,8 +154,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "half-collection",
-    name: "하프 컬렉션",
-    description: "전체 카드의 50%를 수집하세요",
+    name: "Half Collection",
+    description: "Collect 50% of all cards",
     icon: "📚",
     requirement: (collected, allCards) => {
       return collected.size >= Math.floor(allCards.length / 2);
@@ -167,8 +167,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "complete-collection",
-    name: "컴플리트!",
-    description: "모든 카드를 수집하세요",
+    name: "Complete!",
+    description: "Collect all cards",
     icon: "🎊",
     requirement: (collected, allCards) => {
       return collected.size >= allCards.length;
@@ -180,8 +180,8 @@ export const CHALLENGES: Challenge[] = [
   },
   {
     id: "time-traveler",
-    name: "타임 트래블러",
-    description: "2013년부터 2025년까지 모든 연도의 카드를 수집하세요",
+    name: "Time Traveler",
+    description: "Collect cards from every year (2013-2025)",
     icon: "⏰",
     requirement: (collected, allCards) => {
       const years = new Set<number>();

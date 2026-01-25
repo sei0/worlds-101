@@ -114,7 +114,7 @@ export default function BattlePage() {
           >
             ← Back to Gacha
           </Link>
-          <h1 className="text-3xl font-bold mb-2 text-white">Team Battle</h1>
+          <h1 className="text-3xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">Team Battle</h1>
           <p className="text-gray-400 text-sm">
             {stats.wins}W {stats.losses}L {stats.draws}D
           </p>
@@ -122,7 +122,7 @@ export default function BattlePage() {
 
         <div className="space-y-8">
           <div>
-            <h2 className="text-xl font-bold text-blue-400 mb-2 text-center">
+            <h2 className="text-xl font-bold text-blue-400 mb-2 text-center font-[family-name:var(--font-player)]">
               Your Team
             </h2>
             {phase === "drawing" && !allPlayerRevealed && (
@@ -154,7 +154,7 @@ export default function BattlePage() {
                 onClick={handleReDraw}
                 className="px-6 py-3 font-bold text-white rounded-lg
                            bg-slate-700 hover:bg-slate-600
-                           hover:scale-105 transition-all cursor-pointer"
+                           hover:scale-105 transition-all cursor-pointer font-[family-name:var(--font-player)]"
               >
                 🔄 Re-draw
               </Button>
@@ -162,7 +162,7 @@ export default function BattlePage() {
                 onClick={handleStartBattle}
                 className="px-8 py-4 text-lg font-bold text-slate-900 rounded-xl
                            bg-white hover:bg-gray-100
-                           hover:scale-105 transition-all cursor-pointer"
+                           hover:scale-105 transition-all cursor-pointer font-[family-name:var(--font-player)]"
               >
                 ⚔️ Start Battle!
               </Button>
@@ -178,7 +178,7 @@ export default function BattlePage() {
 
           {opponentTeam && phase !== "battling" && (
             <div>
-              <h2 className="text-xl font-bold text-red-400 mb-2 text-center">
+              <h2 className="text-xl font-bold text-red-400 mb-2 text-center font-[family-name:var(--font-player)]">
                 Opponent Team
               </h2>
               {phase === "revealing" && (
@@ -207,7 +207,7 @@ export default function BattlePage() {
           {phase === "result" && battleResult && (
             <div className="text-center py-6">
               <div
-                className={`text-4xl font-bold mb-4 ${
+                className={`text-4xl font-bold mb-4 font-[family-name:var(--font-player)] ${
                   battleResult.winner === "player"
                     ? "text-green-400"
                     : battleResult.winner === "opponent"
@@ -229,7 +229,7 @@ export default function BattlePage() {
                   onClick={handleRematch}
                   className="px-6 py-3 font-bold text-slate-900 rounded-lg
                              bg-white hover:bg-gray-100
-                             hover:scale-105 transition-all cursor-pointer"
+                             hover:scale-105 transition-all cursor-pointer font-[family-name:var(--font-player)]"
                 >
                   ⚔️ Rematch
                 </Button>
@@ -237,7 +237,7 @@ export default function BattlePage() {
                   onClick={handleReDraw}
                   className="px-6 py-3 font-bold text-white rounded-lg
                              bg-slate-700 hover:bg-slate-600
-                             transition-all cursor-pointer"
+                             transition-all cursor-pointer font-[family-name:var(--font-player)]"
                 >
                   🔄 New Team
                 </Button>

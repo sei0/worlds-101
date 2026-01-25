@@ -61,6 +61,7 @@ export function getCollectionStats(allPlayers: Player[], collected: Set<string>)
     total: allPlayers.length,
     collected: collected.size,
     byGrade: {
+      DEMON_KING: { total: 0, collected: 0 },
       LEGENDARY: { total: 0, collected: 0 },
       EPIC: { total: 0, collected: 0 },
       RARE: { total: 0, collected: 0 },

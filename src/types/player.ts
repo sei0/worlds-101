@@ -1,11 +1,11 @@
 export type Position = "TOP" | "JGL" | "MID" | "ADC" | "SUP";
-export type Grade = "LEGENDARY" | "EPIC" | "RARE" | "UNCOMMON" | "COMMON";
+export type Grade = "DEMON_KING" | "LEGENDARY" | "EPIC" | "RARE" | "UNCOMMON" | "COMMON";
 export type Result = "Champion" | "Runner-up" | "Semifinals" | "Quarterfinals" | "Group Stage";
 
-// 년도별 카드 (피파 스타일)
+// Yearly card (FIFA-style)
 export interface Player {
   id: string;           // e.g., "faker-2024"
-  playerId: string;     // e.g., "faker" (선수 고유 ID, 그룹핑용)
+  playerId: string;     // e.g., "faker" (unique player ID for grouping)
   name: string;         // e.g., "Faker"
   year: number;         // e.g., 2024
   team: string;         // e.g., "T1"
@@ -15,7 +15,7 @@ export interface Player {
   result: Result;
 }
 
-// 선수 커리어 통계 (도전과제용)
+// Player career stats (for challenges)
 export interface PlayerCareer {
   playerId: string;
   name: string;
@@ -42,14 +42,15 @@ export interface PlayerData {
 }
 
 export const POSITION_LABELS: Record<Position, string> = {
-  TOP: "탑",
-  JGL: "정글",
-  MID: "미드",
-  ADC: "원딜",
-  SUP: "서폿",
+  TOP: "TOP",
+  JGL: "JGL",
+  MID: "MID",
+  ADC: "ADC",
+  SUP: "SUP",
 };
 
 export const GRADE_COLORS: Record<Grade, string> = {
+  DEMON_KING: "#EF4444",
   LEGENDARY: "#FFD700",
   EPIC: "#A855F7",
   RARE: "#3B82F6",
@@ -58,9 +59,10 @@ export const GRADE_COLORS: Record<Grade, string> = {
 };
 
 export const GRADE_PROBABILITIES: Record<Grade, number> = {
-  LEGENDARY: 0.03,
-  EPIC: 0.10,
-  RARE: 0.20,
-  UNCOMMON: 0.30,
-  COMMON: 0.37,
+  DEMON_KING: 1 / 6,
+  LEGENDARY: 1 / 6,
+  EPIC: 1 / 6,
+  RARE: 1 / 6,
+  UNCOMMON: 1 / 6,
+  COMMON: 1 / 6,
 };

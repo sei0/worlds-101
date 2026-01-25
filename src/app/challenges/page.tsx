@@ -34,13 +34,13 @@ export default function ChallengesPage() {
             href="/"
             className="text-gray-400 hover:text-white text-sm mb-4 inline-block"
           >
-            ← 뽑기로 돌아가기
+            ← Back to Gacha
           </Link>
-          <h1 className="text-3xl font-bold mb-2 text-white">
-            드림팀 챌린지
+          <h1 className="text-3xl font-bold mb-2 text-white font-[family-name:var(--font-title)]">
+            Dream Team Challenges
           </h1>
           <p className="text-gray-400 text-sm">
-            {completedCount}/{CHALLENGES.length} 챌린지 완료
+            {completedCount}/{CHALLENGES.length} Completed
           </p>
         </header>
 
@@ -72,14 +72,14 @@ export default function ChallengesPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <h3
-                      className={`font-bold text-lg ${
+                      className={`font-bold text-lg font-[family-name:var(--font-player)] ${
                         challenge.completed ? "text-yellow-400" : "text-gray-300"
                       }`}
                     >
                       {challenge.name}
                     </h3>
                     {challenge.completed && (
-                      <span className="text-green-400 text-sm">✓ 완료</span>
+                      <span className="text-green-400 text-sm">✓ Done</span>
                     )}
                   </div>
                   <p className="text-gray-400 text-sm mb-3">

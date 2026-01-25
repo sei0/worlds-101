@@ -1,17 +1,29 @@
 import type { Metadata } from "next";
-import { Zalando_Sans_Expanded } from "next/font/google";
+import { Special_Gothic_Condensed_One, Special_Gothic_Expanded_One, Special_Gothic } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
-const zalandoSans = Zalando_Sans_Expanded({
+const specialGothicExpanded = Special_Gothic_Expanded_One({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-zalando",
+  weight: "400",
+  variable: "--font-title",
+});
+
+const specialGothicCondensed = Special_Gothic_Condensed_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-player",
+});
+
+const specialGothic = Special_Gothic({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
-  title: "LoL Worlds Gacha",
-  description: "LoL 월드 챔피언십 선수 가챠 게임",
+  title: "LOL WORLDS GACHA",
+  description: "Collect player cards from LoL World Championship",
 };
 
 export default function RootLayout({
@@ -20,15 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={zalandoSans.variable}>
-      <head>
-        <link
-          rel="stylesheet"
-          as="style"
-          crossOrigin="anonymous"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
-        />
-      </head>
+    <html lang="en" className={`${specialGothicExpanded.variable} ${specialGothicCondensed.variable} ${specialGothic.variable}`}>
       <body className="antialiased">
         <Providers>{children}</Providers>
       </body>

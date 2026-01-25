@@ -98,7 +98,7 @@ function weightedRandomPick(players: Player[]): Player {
 }
 
 function pickCardByGrade(cards: Player[], targetGrade: Grade): Player {
-  const gradeOrder: Grade[] = ["LEGENDARY", "EPIC", "RARE", "UNCOMMON", "COMMON"];
+  const gradeOrder: Grade[] = ["DEMON_KING", "LEGENDARY", "EPIC", "RARE", "UNCOMMON", "COMMON"];
   const targetIndex = gradeOrder.indexOf(targetGrade);
 
   for (let i = targetIndex; i < gradeOrder.length; i++) {
