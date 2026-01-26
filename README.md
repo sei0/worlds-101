@@ -2,7 +2,7 @@
 
 **Build your dream team from 1063 cards of 509 players who competed in Worlds 2013-2025**
 
-A gacha-style card collecting game featuring every player from the League of Legends World Championship history. Each player has yearly cards (FIFA-style) based on their tournament appearances.
+A gacha-style card collecting game featuring every player from the League of Legends World Championship history. Each player has yearly cards based on their tournament appearances.
 
 ## 🎮 Play Now
 
